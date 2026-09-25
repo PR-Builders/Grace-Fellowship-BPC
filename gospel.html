@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Gospel | Grace Fellowship Bible Presbyterian Church</title>
+<meta name="description" content="The Christian gospel begins and ends with God — who He is, why we need saving, and how Jesus saves. From Grace Fellowship Bible Presbyterian Church, Windsor, Colorado.">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+  .max{max-width:1120px;margin:0 auto;padding:0 32px}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  /* ---------- header ---------- */
+  header.site{position:sticky;top:0;z-index:40;background:var(--color-bg);border-bottom:1px solid var(--color-divider)}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1120px;margin:0 auto;gap:24px}
+  .wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--color-text);white-space:nowrap}
+  .wordmark-name{display:flex;flex-direction:column;line-height:1.15}
+  .wordmark-name .n1{font-family:var(--font-heading);font-weight:600;font-size:1.15rem}
+  .wordmark-name .n2{font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-neutral-700)}
+  nav.primary{display:flex;align-items:center;gap:28px}
+  nav.primary ul{list-style:none;display:flex;gap:24px;margin:0;padding:0;font-size:0.88rem}
+  nav.primary a{text-decoration:none;color:var(--color-text);border-bottom:1px solid transparent;padding-bottom:3px;transition:border-color .15s ease,color .15s ease}
+  nav.primary a:hover,nav.primary a[aria-current='page']{border-color:var(--color-accent);color:var(--color-accent)}
+  .nav-toggle{display:none}
+  .burger{display:none}
+
+  /* ---------- article ---------- */
+  .article-hero{padding:56px 0 8px}
+  .article-hero .max{max-width:720px}
+  .kicker{font-family:var(--font-heading);font-style:italic;color:var(--color-accent);font-size:0.98rem;margin-bottom:10px;display:block}
+  .article-hero h1{font-size:clamp(2rem,4vw,3rem)}
+  .lede{font-family:var(--font-heading);font-style:italic;font-size:1.25rem;line-height:1.5;margin-top:20px;color:var(--color-text)}
+
+  article.prose{padding:32px 0 72px}
+  article.prose .max{max-width:720px}
+  article.prose p{font-size:1.05rem;line-height:1.75;text-align:justify;hyphens:auto;margin:0 0 22px}
+  article.prose h2{font-size:1.6rem;border-top:1px solid var(--color-divider);padding-top:36px;margin:52px 0 20px}
+  article.prose h2:first-of-type{margin-top:28px}
+  article.prose a{text-decoration:underline}
+
+  blockquote.verse{margin:32px 0;padding:20px 0 20px 24px;border-left:2px solid var(--color-accent)}
+  blockquote.verse p{font-family:var(--font-heading);font-style:italic;font-size:1.15rem;line-height:1.55;text-align:left;hyphens:none;margin:0 0 8px;color:var(--color-text)}
+  blockquote.verse cite{display:block;font-style:normal;font-size:0.82rem}
+  blockquote.verse cite a{color:var(--color-accent);text-decoration:none;border-bottom:1px solid var(--color-accent)}
+
+  p.callout{text-align:center;font-family:var(--font-heading);font-style:italic;font-size:1.4rem;color:var(--color-accent);margin:36px 0}
+
+  /* ---------- learn more ---------- */
+  .learn{background:var(--color-surface);border-top:1px solid var(--color-divider);padding:64px 0 72px}
+  .learn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+  .learn-grid .card ul{list-style:none;margin:8px 0 0;padding:0;font-size:13px}
+  .learn-grid .card li{margin-bottom:6px}
+  .learn-grid .card li a{text-decoration:underline}
+
+  /* ---------- footer (shared with homepage) ---------- */
+  footer.on-ink{background:var(--color-ink);color:var(--color-neutral-300);padding:48px 0 26px;font-size:0.92rem}
+  footer .foot-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:36px}
+  footer .foot-top .wordmark-name .n1{color:#FFFFFF}
+  footer .foot-top .wordmark-name .n2{color:var(--color-neutral-400)}
+  footer .max{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;padding-bottom:30px;border-bottom:1px solid color-mix(in srgb, #FFFFFF 16%, transparent)}
+  footer h4{color:#FFFFFF;font-family:var(--font-heading);font-weight:600;font-size:1rem;margin-bottom:12px}
+  footer p{margin:0 0 6px;color:var(--color-neutral-300)}
+  footer a{color:var(--color-accent-300);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .copyright{max-width:1120px;margin:18px auto 0;padding:0 32px;font-size:0.78rem;color:var(--color-neutral-500);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1040px){
+    nav.primary ul{display:none}
+    .nav-toggle:checked ~ nav.primary ul{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--color-bg);border-bottom:1px solid var(--color-divider);padding:8px 32px 18px}
+    nav.primary ul li{border-top:1px solid var(--color-divider)}
+    nav.primary ul li:first-child{border-top:none}
+    nav.primary ul li a{display:block;padding:12px 0}
+    .burger{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--color-text);cursor:pointer;flex:none}
+    .nav-row{position:relative}
+  }
+  @media (max-width:920px){
+    footer .max{grid-template-columns:1fr;gap:24px}
+  }
+  @media (max-width:640px){
+    .learn-grid{grid-template-columns:1fr}
+    article.prose p{text-align:left;hyphens:none}
+  }
+  @media (max-width:520px){
+    .btn.header-visit{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="wordmark" href="index.html">
+      <svg viewBox="0 0 120 120" width="34" height="34" style="display:block;overflow:visible;flex:none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path fill="#9E1B22" d="M30 102 C16 94 10 78 14 62 C16 70 20 74 24 75 C18 62 20 48 30 38 C30 46 33 51 37 53 C34 38 40 22 52 12 C50 24 53 32 58 36 C58 24 63 14 70 6 C70 18 74 26 80 32 C82 26 82 20 80 14 C90 24 94 38 90 50 C95 47 98 42 99 36 C106 48 108 62 104 74 C101 70 99 68 96 67 C98 80 94 94 88 102 Z"></path>
+        <path fill="#FFFFFF" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+        <path fill="#9E1B22" fill-opacity="0.22" transform="translate(60 100) scale(0.82) translate(-60 -100)" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+        <g fill="none" stroke="#3B2A1F">
+          <path stroke-width="6" d="M60 101 C58 93 61 87 60 80"></path>
+          <path stroke-width="3.4" d="M60 82 C54 76 46 72 37 66"></path>
+          <path stroke-width="3.4" d="M60 82 C66 76 74 72 83 66"></path>
+          <path stroke-width="3" d="M60 84 C58 72 61 60 60 46"></path>
+          <path stroke-width="2.6" d="M61 97 C68 95 72 90 71 83"></path>
+          <path stroke-width="2" d="M48 72 C46 64 42 58 38 54"></path>
+          <path stroke-width="2" d="M72 72 C74 64 78 58 82 54"></path>
+          <path stroke-width="1.8" d="M60 62 C54 58 50 52 48 46"></path>
+          <path stroke-width="1.8" d="M60 60 C66 56 70 50 72 44"></path>
+        </g>
+        <g fill="#5E6B3A" stroke="#FFFFFF" stroke-width="0.88" style="paint-order:stroke">
+          <path transform="translate(52.8 65.6) rotate(-32) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(53.3 61.1) rotate(-10) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(57.3 58.1) rotate(-5) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(62.7 58.1) rotate(2) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(66.7 61.1) rotate(7) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(44.5 64.8) rotate(-49) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(45.4 59.5) rotate(-25) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(48.7 55.1) rotate(-20) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(53.9 52.0) rotate(-15) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(60.0 51.0) rotate(-9) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(66.1 52.0) rotate(18) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(71.3 55.1) rotate(23) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(74.6 59.5) rotate(28) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(75.5 64.8) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(37.8 69.0) rotate(-66) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(37.0 63.6) rotate(-42) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(38.0 58.3) rotate(-39) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(40.8 53.3) rotate(-36) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(45.1 49.3) rotate(-32) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(50.6 46.4) rotate(-7) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(56.8 44.9) rotate(-3) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(63.2 44.9) rotate(2) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(69.4 46.4) rotate(6) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(74.9 49.3) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(79.2 53.3) rotate(35) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(82.0 58.3) rotate(38) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(83.0 63.6) rotate(41) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(35.8 58.8) rotate(-54) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(39.1 52.5) rotate(-28) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(44.7 47.4) rotate(-22) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(51.9 44.1) rotate(-15) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(60.0 43.0) rotate(-9) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(68.1 44.1) rotate(18) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(75.3 47.4) rotate(25) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(80.9 52.5) rotate(31) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(84.2 58.8) rotate(36) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        </g>
+        <path fill="#3B2A1F" stroke="#FFFFFF" stroke-width="1.2" d="M26 108 L40 99 L50 102 L58 97 L64 101 L72 98 L82 101 L94 108 Z"></path>
+        <path fill="none" stroke="#FFFFFF" stroke-width="1.2" d="M44 108 L56 102 L68 108"></path>
+      </svg>
+      <span class="wordmark-name">
+        <span class="n1">Grace Fellowship</span>
+        <span class="n2">Bible Presbyterian Church</span>
+      </span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="primary">
+      <ul>
+        <li><a href="gospel.html" aria-current="page">The Gospel</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/what-we-believe">What We Believe</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/theology-of-church">Theology of Church</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/about-5-1">Sermons</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/blog">Blog</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/shepherds">Shepherds</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/contact-us">Contact Us</a></li>
+      </ul>
+      <label class="burger" for="nav-toggle">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 1h18M0 7h18M0 13h18"/></svg>
+      </label>
+      <a class="btn btn-primary header-visit" href="index.html#visit">Visit Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="article-hero">
+    <div class="max">
+      <span class="kicker">How Can I Be Saved?</span>
+      <h1 class="display">Who is God</h1>
+      <p class="lede">The Christian gospel begins and ends with God, the real God, the one who created all things, and the one who rules over heaven and earth.</p>
+    </div>
+  </div>
+
+  <article class="prose">
+    <div class="max">
+
+      <p>The question, &ldquo;How can I be saved?&rdquo; is just another way of asking, &ldquo;How can I know God?&rdquo; &ldquo;How can I be in a right relationship with my Creator?&rdquo;</p>
+      <p>If God is real, and He is, and if it is possible to be in either a right, or a wrong, relationship with Him, and it is, then the most important question in life is, &ldquo;Can I be right with God?&rdquo; Notice the question is not just, &ldquo;Can I know about God?&rdquo; but, &ldquo;Can I be right with God in my own life?&rdquo;</p>
+      <p>Let&rsquo;s consider this question.</p>
+
+      <h2>God Must Come to Us, And He Does</h2>
+      <p>To begin, we need to know something about God. You and I live in the created universe. It means we live in three dimensions constrained by time. But God created the three dimensions and time. He is outside and above the universe. In other words, we can&rsquo;t get out, but God can get in. This means that if we are to know about God and actually know God, He must come to us. If we are to love God, and experience His love in our life, He must come to us. And if we are ever to be right with our God, He must come to us.</p>
+      <p>Thus, the gospel begins with this, God has come to us.</p>
+      <blockquote class="verse">
+        <p>Long ago, at many times and in many ways, God spoke to our fathers by the prophets, but in these last days he has spoken to us by his Son, whom he appointed the heir of all things, through whom also he created the world. He is the radiance of the glory of God and the exact imprint of his nature, and he upholds the universe by the word of his power.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+1%3A1-3&amp;version=ESV" target="_blank" rel="noopener">Hebrews 1:1&ndash;3</a></cite>
+      </blockquote>
+      <p>This Bible verse tells us that God has come to us. He has revealed Himself to human beings by speaking the words written in the Bible and by sending His Son, Jesus, to us as a man. The very God who created all things has spoken to people on this earth. In fact, God has not only spoken to us, but He came to live among us for a time.</p>
+
+      <h2>God is Relational in His Very Nature</h2>
+      <p>Because God has spoken to us in the Bible, when we want to know God and be right with Him, we turn to the Bible.</p>
+      <p>The first thing we need to know about God is that He is a &ldquo;Trinity.&rdquo; This is just a word to tell us that, in one sense, God is very different from human beings for God is three persons in one God. There is one and only one God, but He is complex beyond our simple understanding. In human terms, He is three persons in one God and each person is fully God, yet they are, together, one God. God Himself tells us that the three persons are the Father, the Son, and the Holy Spirit.</p>
+      <p>Let me tell you why I start with the difficult idea of the Trinity &mdash; because it is fundamental to our ability to actually know God.</p>
+      <p>You see, even before God created the universe, God existed. He was before time, outside of time, and outside of space. In this state, the Father has always loved the Son and the Holy Spirit, the Son has always loved the Father and the Holy Spirit, and the Holy Spirit has always loved the Father and the Son. The point is this: God is relational in His very nature. God did not need to create people as an object of His love in order to love. Love is intrinsic to God. This is why the Bible tells us that &ldquo;God is Love&rdquo; (<a href="https://www.biblegateway.com/passage/?search=1+John+4%3A7&amp;version=ESV" target="_blank" rel="noopener">1 John 4:7</a>). Not just that God loves, but that the essence of love comes from who He is.</p>
+      <p>Now here is something amazing. When God created human beings, the Bible says He created us &ldquo;in His image.&rdquo;</p>
+      <blockquote class="verse">
+        <p>Then God said, &ldquo;Let us make man in our image, after our likeness&hellip;&rdquo;<br>So God created man in his own image,<br>in the image of God he created him;<br>male and female he created them.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Genesis+1%3A26-27&amp;version=ESV" target="_blank" rel="noopener">Genesis 1:26&ndash;27</a></cite>
+      </blockquote>
+      <p>You see, when God created all things, He created out of who He is. The Bible tells us that He is the living God (<a href="https://www.biblegateway.com/passage/?search=Jeremiah+10%3A10&amp;version=ESV" target="_blank" rel="noopener">Jeremiah 10:10</a>). It says, &ldquo;In Him was life, and the life was the light of men&rdquo; (<a href="https://www.biblegateway.com/passage/?search=John+1%3A4&amp;version=ESV" target="_blank" rel="noopener">John 1:4</a>). Thus, God imparted life to living creatures because He is the very source of all life. We live only because He lives.</p>
+
+      <h2>God Created all Human Beings in His Image</h2>
+      <p>Therefore, if God is relational in His very nature, then when He created human beings in His image, He made them relational. The point is that we, as humans, are created in God&rsquo;s image precisely so we can know and love Him and so He can know and love us.</p>
+      <p>Every human being is created with intrinsic value simply because every human being is created in God&rsquo;s image. This value can never be taken away, even though, as we will see, our hearts are now marred by sin.</p>
+      <p>When God created Adam and Eve, God was with them, He talked with them and He walked in the garden with them. In this state, God, the Creator, said that all things were very good.</p>
+      <p>God gave Adam and Eve a command. He said of the tree of the knowledge of good and evil, you shall not eat, for in the day you eat of it, you shall surely die.</p>
+      <p>This command would test whether or not Adam and Eve would live under God&rsquo;s rule, trusting Him for all things. You see, God gave human beings dominion over all things in this universe except for the human heart. Only God rules the human heart.</p>
+
+      <h2>Adam and Eve Sinned Against God</h2>
+      <p>Shortly after creation, tragedy struck the human race. Adam and Eve sinned against God by eating of the forbidden tree. They fell to the temptation to seek to be as God themselves. They decided that they would rule their own life rather than live in a right relationship with God, under His rule. They turned their trust and focus inward. This was willful rebellion against God and every sin since that time has the same nature of willful rebellion.</p>
+      <p>You may ask, how did this happen when all things were very good? Why did God allow this? God made a choice. He created human beings with free will with the ability to choose good or evil in the garden. They chose the evil of lawlessness. The Bible tells us that &ldquo;sin is lawlessness&rdquo; (<a href="https://www.biblegateway.com/passage/?search=1+John+3%3A4&amp;version=ESV" target="_blank" rel="noopener">1 John 3:4</a>).</p>
+      <p>This sin brought separation from fellowship with God. For the first time, Adam and Eve tried to hide from their Creator. It is hard for us to imagine just how devastating this was. Immediately after this sin, Adam and Eve were banished from the Garden of Eden. In the first generation, murder, envy, vengeance, and death spread throughout all people. The Bible tells us that even creation itself, &ldquo;was subjected to futility&rdquo; by human sin (<a href="https://www.biblegateway.com/passage/?search=Romans+8%3A20&amp;version=ESV" target="_blank" rel="noopener">Romans 8:20</a>).</p>
+      <p>Actually it might not be so hard for us to imagine. Murder, envy, vengeance, and death continue. We live in a world that has clearly gone wrong; we see the evil that people inflict on one another; we see death and destruction in nature; perhaps, most of all, we see the corruption in our own hearts. We want to do good but do not find it within ourselves to do good. When we are honest with ourselves, we know that lawlessness has infected our own lives. We ourselves, like all people, are often selfish, angry, hurtful, dishonest, disrespectful, and wicked in our thoughts. Not one of us, the world over, could stand the bright light of truth showing forth all our thoughts, words, and actions. God has given us a conscience to convict us of our sin by a guilt designed to send us to Jesus for forgiveness.</p>
+      <p>When the Bible lists the effects of sin, it lists things like, &ldquo;idolatry, sorcery, enmity, strife, jealousy, fits of anger, rivalries, dissensions, divisions, envy, drunkenness, sexual immorality, evil desires, covetousness, idolatry&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Galatians+5%3A19-21&amp;version=ESV" target="_blank" rel="noopener">Galatians 5:19&ndash;21</a>, <a href="https://www.biblegateway.com/passage/?search=Colossians+3%3A5&amp;version=ESV" target="_blank" rel="noopener">Colossians 3:5</a>). It is easy to see that these are the things that separate and hurt people. Thus, it is easy to see that these are the things that separate us from a holy, just, and loving God.</p>
+      <p>Think about how tragic this was when Adam and Eve hid from God. They were created to flourish in the very presence of their loving Creator and yet, here they were hiding in shame from that very Creator. Now think about how tragic it is in your life that you know the shame of sin and that you, even you who are reading this, feel the need to hide your guilt from your Creator.</p>
+
+      <h2>God Judges Sin</h2>
+      <p>Is it right for God to judge and punish sin? Judge for yourself the evil we inflict on one another by sin. It is immense. Then, think of the evil of sinning against our good God. It is more immense. As God is an infinitely good God, so sin against Him is an infinite evil.</p>
+      <p>Notice that sin is always &ldquo;against&rdquo; someone. Sin is against a personal and loving God, and it is against people whom He created in His image and whom He loves.</p>
+      <p>The Bible tells us, &ldquo;He who justifies the wicked and he who condemns the righteous are both alike an abomination to the LORD&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Proverbs+17%3A15&amp;version=ESV" target="_blank" rel="noopener">Proverbs 17:15</a>). We instinctively know this is true. We would not even tolerate a human judge who set the guilty free and condemned the innocent, much less could God be good and perfect in His justice and do such wrong. No, the wicked, which, unfortunately is every one of us, must face the just penalty due to our sin. And that just punishment is death and eternal separation from the love of God.</p>
+      <p>Furthermore, the Bible tells us that sin evokes God&rsquo;s wrath. That is, God hates everything about sin. He is angry with sin. Actually, this is not too hard for us to understand. If a person really hurts someone we love by malicious intent, then we would be angry with everything about that hurt, the person that could devise such malicious intent in their heart, the act itself, and the long-term effects of that malicious act. How much more must a loving, perfectly just God be angry with everything about sin, the person who could devise such evil intent in their heart, the words and actions produced by such intent, and the hurt and destruction that results. God&rsquo;s anger at everything about sin is so strong it is called His wrath.</p>
+      <p>This is the bad news; this is the universal problem. We must be careful not to take the willful sin and corruption in our own hearts too lightly or we will fail to understand the greatness of God&rsquo;s love shown in the gospel of Jesus.</p>
+
+      <h2>We Cannot Climb Out On Our Own</h2>
+      <p>All human invented religions are attempts to overcome this problem by reaching up to God, by trying to make ourselves good enough to get God to accept and love us. If only we can do enough good to cancel our bad, perhaps our conscience will be clear enough so that we can come to God with confidence. But reality always stands in the way. Something is wrong in the human heart that must be fixed from the outside. Since the first sin, no human being has a core of righteousness from which to live life as God designed and commands.</p>
+      <p>We can&rsquo;t get out, but God can get in. If we are to know real goodness and fellowship with our Creator, He must come to us and solve the problem of sin.</p>
+
+      <h2>The Good News</h2>
+      <p>Jesus said this:</p>
+      <blockquote class="verse">
+        <p>&ldquo;For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life. For God did not send his Son into the world to condemn the world, but in order that the world might be saved through him.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+3%3A16-17&amp;version=ESV" target="_blank" rel="noopener">John 3:16&ndash;17</a></cite>
+      </blockquote>
+      <p>The good news is this: God has come to rescue us from sin and the sorrow and shame of lawlessness in our hearts. God has solved the problem of sin. He came to earth in the person of Jesus of Nazareth who lived, died, and rose again 2000 years ago.</p>
+      <p>How can this be, you ask. God executes the judgment; how can He also be the rescuer?</p>
+      <p>It is the wonder of the Christian gospel to proclaim precisely how God did this &mdash; how He remains perfectly just while setting guilty sinners free from His own just judgment. The Bible sets forth this question clearly in the Book of Exodus, where God proclaims His goodness. It says:</p>
+      <blockquote class="verse">
+        <p>The LORD passed before [Moses] and proclaimed, &ldquo;The LORD, the LORD, a God merciful and gracious, slow to anger, and abounding in steadfast love and faithfulness, keeping steadfast love for thousands, forgiving iniquity, transgression, and sin, but who will by no means clear the guilty.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Exodus+34%3A6-7a&amp;version=ESV" target="_blank" rel="noopener">Exodus 34:6&ndash;7a</a></cite>
+      </blockquote>
+      <p>It is only the guilty that need to be cleared! How can this be? How can God forgive iniquity, transgression and sin and, yet, <em>not</em> clear the guilty? The secret is this: God does not clear the guilty. He does something much better; He forgives them. The secret is in the word forgiveness. We must understand what God means by forgiveness. <a href="https://www.biblegateway.com/passage/?search=Romans+4%3A7-8&amp;version=ESV" target="_blank" rel="noopener">Romans 4:7&ndash;8</a> tells us:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Blessed are those whose lawless deeds are forgiven, and whose sins are covered; blessed is the man against whom the Lord will not count his sin.&rdquo;</p>
+        <cite>Romans 4:7&ndash;8</cite>
+      </blockquote>
+
+      <h2>God&rsquo;s Forgiveness is Real</h2>
+      <p>This passage tells us that God forgives sin and, therefore, does not count our forgiven sin against us. The word, &ldquo;forgiveness&rdquo; here is a translation of the original Greek word (&#7936;&#966;&#943;&#951;&#956;&#953;). This word means to separate and banish away. It is the same word used when Jesus heals a young woman&rsquo;s fever &mdash; the fever (&#7936;&#966;&#943;&#951;&#956;&#953;) her. That is, the fever was separated and banished away, and she was restored to health. The point is that God&rsquo;s forgiveness is real. God makes an actual separation of the sin from the person and, thereby, restores the person&rsquo;s soul.</p>
+      <p><a href="https://www.biblegateway.com/passage/?search=Psalm+103&amp;version=ESV" target="_blank" rel="noopener">Psalm 103</a> tells us:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Bless the LORD, who forgives all your iniquity,<br>who heals all your diseases,<br>who redeems your life from the pit,<br>who crowns you with steadfast love and mercy&hellip;<br>as far as the east is from the west,<br>so far does he remove our transgressions from us.&rdquo;</p>
+        <cite>Psalm 103</cite>
+      </blockquote>
+      <p>The <a href="https://www.biblegateway.com/passage/?search=Isaiah%201%3A18&amp;version=ESV" target="_blank" rel="noopener">Book of Isaiah</a> tells us:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Come now, let us reason together, says the LORD:<br>though your sins are like scarlet,<br>they shall be as white as snow;<br>though they are red like crimson,<br>they shall become like wool.&rdquo;</p>
+        <cite>Isaiah 1:18</cite>
+      </blockquote>
+      <p>We can picture a white cloth, stained red. No matter how dark the stain, God can separate it and banish it away. There is no sin in your life so dark that God cannot remove it. There is no sin so intertwined in your life that God can not separate it and banish it away. No matter how deeply the stain of sin is embedded in the fibers of your life, God can separate it and banish it away.</p>
+      <p class="callout">God&rsquo;s forgiveness is real!</p>
+
+      <h2>Jesus is Our Substitute</h2>
+      <p>Now you may ask, if God separates my sins from me, where do they go? They go to Jesus. And if God cleans me white as snow, where does the righteousness come from to count me as righteous? It comes from Jesus.</p>
+      <p>God is fully just; He does not just sweep evil, wrong, and hurt under the rug. He actually executes the full punishment for our sin on Jesus. Jesus is our substitute. He died in our place so that all who call upon Him might have eternal life.</p>
+      <p><a href="https://www.biblegateway.com/passage/?search=Romans+8%3A3&amp;version=ESV" target="_blank" rel="noopener">Romans 8:3</a> tells us that Jesus came, &ldquo;in the likeness of sinful flesh and for sin,&rdquo; thus, by His death, he &ldquo;condemned sin in the flesh.&rdquo; In other words, forgiveness means your sins are gone and that means the corruption of sin, the guilt of sin, the shame of sin are gone. As far as the east is from the west, so far does God remove our sin from us in Jesus. This is how God can forgive sins but not clear the guilty.</p>
+      <blockquote class="verse">
+        <p>&ldquo;Since therefore the children share in flesh and blood, he himself (the second person of the Trinity, God the Son) likewise partook of the same things, that through death he might destroy the one who has the power of death, that is, the devil, and deliver all those who through fear of death were subject to lifelong slavery.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+2%3A14-15&amp;version=ESV" target="_blank" rel="noopener">Hebrews 2:14&ndash;15</a></cite>
+      </blockquote>
+      <p>You see, Jesus came to earth as a human precisely so that by His death on a Roman cross, He could take human sin to himself and pay the just punishment for those sins. In doing this, Jesus sets us free from the fear of death because He has conquered the only power of death, which is sin. Without sin, death is but a passage into God&rsquo;s very presence for all eternity.</p>
+      <p>Now, I have a question. If God executed all His just punishment and wrath on Jesus, how much punishment and wrath are left for us who are forgiven? The answer is <em>none</em>. Jesus sets the prisoner free.</p>
+
+      <h2>Salvation by Grace</h2>
+      <p>In the Book of Romans, there is a short summary of how God can rescue sinners from the judgment of death and yet still remain perfectly just in Himself.</p>
+      <blockquote class="verse">
+        <p>&ldquo;For all have sinned and fall short of the glory of God, and are justified by his grace as a gift, through the redemption that is in Christ Jesus, whom God put forward as a propitiation by his blood, to be received by faith. This was to show God&rsquo;s righteousness, because in his divine forbearance he had passed over former sins. It was to show his righteousness at the present time, so that he might be just and the justifier of the one who has faith in Jesus.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+3%3A23-26&amp;version=ESV" target="_blank" rel="noopener">Romans 3:23&ndash;26</a></cite>
+      </blockquote>
+      <p>The key phrase is this: &ldquo;Are justified by his grace as a gift, through the redemption that is in Christ Jesus, whom God put forward as a propitiation by his blood.&rdquo;</p>
+      <p>The word, &ldquo;propitiation,&rdquo; is just a single word that describes what we just said: that Jesus was a substitute in our place. It means all of God&rsquo;s just punishment and anger have been resolved in the death of Jesus.</p>
+      <p>Thus, this verse says directly that God is both, &ldquo;just and the justifier of the one who has faith in Jesus.&rdquo; Think about how amazing this is. If God were not perfectly just, all would be lost, for heaven itself is guaranteed only by God&rsquo;s justice. Because of His justice, we know that God does only right, and He does not change. He won&rsquo;t forgive today and change His mind tomorrow.</p>
+      <p>Now this passage says something else important. It says that God justifies guilty sinners by grace, as a gift. To be justified means to be declared righteous in God&rsquo;s sight. This is entirely by grace, which means it comes entirely from within God because of His great love. In other words, salvation is not a process of us making ourselves good enough for God to love us. Salvation comes entirely from God as a gift. This is the goodness of God.</p>
+
+      <h2>Salvation Through Faith</h2>
+      <p>This passage says one more vital thing. It says that God&rsquo;s forgiveness is, &ldquo;received by faith.&rdquo; Faith receives grace. If we think about this, it could be no other way. If we cannot make ourselves good enough, salvation must be a gift and a gift is always received, not earned.</p>
+      <blockquote class="verse">
+        <p>&ldquo;That is why it depends on faith, in order that the promise may rest on grace and be guaranteed to all his offspring.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+4%3A16&amp;version=ESV" target="_blank" rel="noopener">Romans 4:16</a></cite>
+      </blockquote>
+      <p>Now how does faith receive grace? The Book of Hebrews says:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Now faith is the assurance of things hoped for, the evidence [proof] of things not seen&hellip;and without faith it is impossible to please him, for whoever would draw near to God must believe that he exists and that he rewards those who seek him.&rdquo;</p>
+        <cite><a href="http://biblegateway.com/passage/?search=Hebrews+11&amp;version=ESV" target="_blank" rel="noopener">Hebrews 11:1,6</a></cite>
+      </blockquote>
+      <p>In other words, faith is not a leap in the dark; faith is not a blind hope; it is not a mystical something out there. The Bible says that faith, just like God&rsquo;s forgiveness, is real. It is assurance and evidence and trust. It is drawing near to God with the full trust that He rewards those who seek Him.</p>
+      <p>Thus, faith has three parts: knowledge of God and what He accomplished, belief in the truth of that knowledge, and a full, active, personal trust in God Himself based on that knowledge.</p>
+      <p>If we begin with knowledge, there is ample historical evidence that Jesus walked this earth, that He died on a Roman cross, and that He rose from the dead. The Bible itself is a significant historical document with more proof of its reliability than all other ancient historical documents. In the Bible, Jesus&rsquo; disciples, John and Peter, say this:</p>
+      <blockquote class="verse">
+        <p>John: [The one] which was from the beginning, which we have heard, which we have seen with our eyes, which we have looked upon, and our hands have handled, concerning the Word of life&mdash;the life was manifested, and we have seen, and bear witness, and declare to you that eternal life which was with the Father and was manifested to us. (1 John 1:1&ndash;3)</p>
+      </blockquote>
+      <p>John lived and traveled with Jesus for three years. He knew that Jesus was the real deal.</p>
+      <blockquote class="verse">
+        <p>Peter: For we did not follow cleverly devised myths when we made known to you the power and coming of our Lord Jesus Christ, but we were eyewitnesses of his majesty. (2 Peter 1:16)</p>
+      </blockquote>
+      <p>Jesus is not myths and fables, but actual historical fact. The historian Luke wrote:</p>
+      <blockquote class="verse">
+        <p>Inasmuch as many have undertaken to compile a narrative of the things that have been accomplished among us, just as those who from the beginning were eyewitnesses and ministers of the word have delivered them to us, it seemed good to me also, having followed all things closely for some time past, to write an orderly account for you, most excellent Theophilus, that you may have certainty concerning the things you have been taught.</p>
+      </blockquote>
+      <p>Notice the word, &ldquo;certainty.&rdquo; God has given us the Bible so that we can have real certainty concerning God&rsquo;s character and actions in history.</p>
+      <p>To grasp the solid foundation under the Christian faith, we need to include that Jesus did not just die in our place, He also rose from the dead, proving His victory over sin and death and Satan and hell.</p>
+      <p>The Bible says that not only Jesus&rsquo; disciples, but more than 500 people, saw Jesus after He rose from the dead over a period of 40 days.</p>
+      <p>The disciples saw Him die and, yet, when they encountered Him after He rose from the dead, they knew he was Jesus. They could see and touch the nail prints in his hands and feet. Jesus did not rise from the dead a spirit; He actually rose bodily.</p>
+      <p>These disciples, who watched Jesus die, had so much certainty in the resurrection that they devoted the rest of their lives to proclaiming salvation in the name of Jesus. Every one of them was put to death for their proclamation of salvation in Jesus, yet they did not waver.</p>
+      <p>Today, we can have certainty in our faith because these things were not myths and fables, but actual historical fact.</p>
+
+      <h2>Faith Means Trust</h2>
+      <p>Now true saving faith involves not just knowledge.</p>
+      <blockquote class="verse">
+        <p>&ldquo;Truly, truly, I say to you, unless one is born again he cannot see the kingdom of God.&rdquo;</p>
+        <cite>John 3:3</cite>
+      </blockquote>
+      <p>Likewise,</p>
+      <blockquote class="verse">
+        <p>&ldquo;By faith we understand that the universe was created by the word of God, so that what is seen was not made out of things that are visible.&rdquo;</p>
+        <cite>Hebrews 11:3</cite>
+      </blockquote>
+      <p>In other words, no matter how clear the factual data is, it takes faith to see through our human bias against God. It takes the work of the Holy Spirit to take the clouds out of our eyes so we can actually see that the Kingdom of God is real.</p>
+      <p>Real saving faith then involves trust in God, as the object of our faith. This trust is a casting of our entire life into the care of Jesus. It is a trust that transforms our life.</p>
+      <p>Let me give an illustration.</p>
+      <p>On June 30, 1859, a man named Blondin walked over Niagara Falls on a rope stretched from the American side to the Canadian side. Over the next several months, he completed this feat over and over, adding various tricks. Once, he back flipped across.</p>
+      <p>But then came a test for a man named Colcord, a good friend and manager of Blondin. As Blondin prepared to cross again, Colcord climbed on his back for the walk across. Blondin said to Colcord, &ldquo;Until I clear this place be a part of me, mind, body, and soul. If I sway, sway with me. Do not attempt to do any balancing yourself.&rdquo; You see, the spectators may have believed Blondin could complete the task, but only Colcord actually trusted.</p>
+      <p>Think about the faith that this took. It was not a leap in the dark, his faith was based on his knowledge of Blondin&rsquo;s strength and skill. It was trust.</p>
+      <p>This is still a far cry from biblical faith. I would never place my trust in a mere man in such a way. But God is no mere man. He is the infinite, all powerful, all knowing Creator. He is absolutely trustworthy in every way. Thus, I gladly place my full trust in Jesus who is God come to earth.</p>
+      <p>Biblical saving faith requires this full trust of your life and eternal future into the hands of Jesus. Only this kind of faith receives grace and is, therefore, accounted by God as righteousness on the basis of what Jesus accomplished. This kind of faith is a gift from God. The Bible describes the result of this faith as calling on the name of the Lord and casting all your cares on Jesus.</p>
+      <blockquote class="verse">
+        <p>&ldquo;Everyone who calls on the name of the Lord will be saved.&rdquo;</p>
+        <cite><a href="http://biblegateway.com/passage/?search=Romans+10%3A13&amp;version=ESV" target="_blank" rel="noopener">Romans 10:13</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>&ldquo;Humble yourselves, therefore, under the mighty hand of God so that at the proper time he may exalt you, casting all your anxieties on [Jesus], because he cares for you.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Peter+5%3A7&amp;version=ESV" target="_blank" rel="noopener">1 Peter 5:7</a></cite>
+      </blockquote>
+      <p>Jesus Himself said this:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Come to me, all who labor and are heavy laden, and I will give you rest. Take my yoke upon you, and learn from me, for I am gentle and lowly in heart, and you will find rest for your souls.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+11%3A28-29&amp;version=ESV" target="_blank" rel="noopener">Matthew 11:28&ndash;29</a></cite>
+      </blockquote>
+
+      <h2>Faith Means Repentance</h2>
+      <p>If you were to place your full trust in Jesus for salvation, what would it mean for your life right now? Clearly, it would mean a different kind of life. Salvation is salvation from sin and lawlessness and their consequent judgement and to a life of knowing God. The point is that the Christian life is a life of loving God and, therefore, a life of forsaking the sin and lawlessness that is against Him. This forsaking sin and embracing goodness and righteousness is called, &ldquo;repentance.&rdquo; Repentance is a vital part of faith, and it is God&rsquo;s command:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Now [God] commands all people everywhere to repent.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Acts+17%3A30&amp;version=ESV" target="_blank" rel="noopener">Acts 17:30b</a></cite>
+      </blockquote>
+      <p>Jesus Himself said, &ldquo;The time is fulfilled, and the kingdom of God is at hand; repent and believe in the gospel.&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Mark+1%3A15&amp;version=ESV" target="_blank" rel="noopener">Mark 1:15</a>)</p>
+
+      <h2>Jesus Sets the Prisoner Free</h2>
+      <p>My favorite picture of faith, repentance, and a new life is found in <a href="https://www.biblegateway.com/passage/?search=Psalm+40&amp;version=ESV" target="_blank" rel="noopener">Psalm 40</a>.</p>
+      <blockquote class="verse">
+        <p>He drew me up from the pit of destruction, out of the miry bog, and set my feet upon a rock, making my steps secure.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Psalm+40%3A2&amp;version=ESV" target="_blank" rel="noopener">Psalm 40:2</a></cite>
+      </blockquote>
+      <p>If you have ever been stuck in a miry bog, you know that the more you struggle to escape, the deeper you end up pushing your feet into the mud. The only way out is help. You need someone to pull you out and set you on solid ground. This is what Jesus does. He pulls us up from the miry pit of sin and lawlessness. I have worked with men snared by addiction. These men were truly caught in a miry bog. Of course, all people caught by sin of one kind or another are captured by it. People caught in a life of adultery, or ensnared by a lie, dig themselves deeper and deeper. Even the sin of bitterness and anger ensnare a person in the miry bog. Whatever it is that has captured your heart in what your conscience tells you is wrong, Jesus can set you free.</p>
+
+      <h2>The Gospel Ends with God</h2>
+      <p>I said the gospel begins and ends with God. It begins with God creating you to know Him and know His love for you. It ends with eternity in His presence. What does eternity in God&rsquo;s presence look like? Listen to how God describes it:</p>
+      <blockquote class="verse">
+        <p>&ldquo;Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people, and God himself will be with them as their God. He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore, for the former things have passed away.&rdquo; And he who was seated on the throne said, &ldquo;Behold, I am making all things new.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Revelation+21%3A3-5&amp;version=ESV" target="_blank" rel="noopener">Revelation 21:3b&ndash;5</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Therefore my heart is glad, and my whole being rejoices; my flesh also dwells secure. For you will not abandon my soul to Sheol or let your holy one see corruption. You make known to me the path of life; in your presence there is fullness of joy; at your right hand are pleasures forevermore.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Psalm+16%3A9-11&amp;version=ESV" target="_blank" rel="noopener">Psalm 16:9&ndash;11</a></cite>
+      </blockquote>
+      <p>In other words, the gospel is not just about escaping judgment, the gospel is about restoring a lost relationship with your loving Creator.</p>
+
+      <h2>God is Calling on You to Repent and Believe the Gospel</h2>
+      <p>God is calling on you who are reading this to believe the gospel, repent, and trust in the Lord Jesus Christ for all of life and eternity.</p>
+      <p>The book of John says that it was written precisely so that you might believe and have eternal life in His name.</p>
+      <blockquote class="verse">
+        <p>&ldquo;But these are written that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in His name.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+20%3A31&amp;version=ESV" target="_blank" rel="noopener">John 20:31</a></cite>
+      </blockquote>
+      <p>A young man once asked me, &ldquo;How do I repent? Do I need to talk to someone?&rdquo; The answer is, of course you need to talk to someone. You need to talk to the Lord Jesus Christ. You need to confess your state of sin and seek His forgiveness with your whole heart.</p>
+      <p>And you, too, if you do not know that you have trusted in Jesus, must talk to Him. You must call on Him to save you, forgive you, and cleanse you white as snow. Is God calling you home? Can I just say that God is so good that even one day apart from Him is too long.</p>
+      <p>Know this, you are not alone. God Himself promises to give a new heart and make you a new creation.</p>
+      <blockquote class="verse">
+        <p>&ldquo;Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=2+Corinthians+5%3A17&amp;version=ESV" target="_blank" rel="noopener">2 Corinthians 5:17</a></cite>
+      </blockquote>
+      <p>Not only that, but God promises to complete the good work of salvation that He begins in you.</p>
+      <blockquote class="verse">
+        <p>&ldquo;And I am sure of this, that he who began a good work in you will bring it to completion at the day of Jesus Christ.&rdquo;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Philippians+1%3A6&amp;version=ESV" target="_blank" rel="noopener">Philippians 1:6</a></cite>
+      </blockquote>
+
+    </div>
+  </article>
+
+  <section class="learn">
+    <div class="max">
+      <span class="kicker">Next steps</span>
+      <h2 style="margin:0 0 32px">If You Want to Learn More</h2>
+      <div class="learn-grid">
+        <div class="card">
+          <span class="card-kicker">Read the Bible</span>
+          <p class="card-body">The Bible is God&rsquo;s Word to you so that you might know Him and love Him. We recommend reading the Book of John first &mdash; the Apostle John wrote this gospel about the life of Jesus to show that Jesus was the Son of God, come to be the Savior of the world. Especially focus on John chapter 3. After the Book of John, we recommend the Book of Romans, especially Romans chapters 1&ndash;8. You can find the Bible online or in a free Bible app for Android and iPhone.</p>
+          <ul>
+            <li><a href="https://www.blueletterbible.org/" target="_blank" rel="noopener">blueletterbible.org</a></li>
+            <li><a href="https://www.biblegateway.com/" target="_blank" rel="noopener">biblegateway.com</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Church</span>
+          <p class="card-body">Join us for worship every Sunday morning. Here you will find a loving community of believers devoted to helping one another in the life of bringing glory to God.</p>
+          <ul>
+            <li><a href="index.html#visit">Service times &amp; location &rarr;</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Sermons</span>
+          <p class="card-body">Three messages by Bryan Prouty on this same good news.</p>
+          <ul>
+            <li><a href="https://www.sermonaudio.com/sermoninfo.asp?SID=417221724191954" target="_blank" rel="noopener">&ldquo;Your Sins are Forgiven&rdquo;</a></li>
+            <li><a href="https://www.sermonaudio.com/sermoninfo.asp?SID=626222145186703" target="_blank" rel="noopener">&ldquo;A Call to Come Home&rdquo;</a></li>
+            <li><a href="https://www.sermonaudio.com/sermoninfo.asp?SID=7242222392736" target="_blank" rel="noopener">&ldquo;Christ, Grace, and Faith&rdquo;</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="card-kicker">Helpful Books</span>
+          <p class="card-body"><em>The Story of Reality</em> by Gregory Koukl &mdash; from Genesis through Revelation, the gospel of salvation in Jesus is the central theme of the Bible and of history.<br><br><em>The Heart of the Gospel</em> by Sinclair Ferguson &mdash; &ldquo;He who did not spare his own Son but gave him up for us all, how will he not also with him graciously give us all things?&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Romans+8%3A32&amp;version=ESV" target="_blank" rel="noopener">Romans 8:32</a>)<br><br><em>Mere Christianity</em> by C. S. Lewis &mdash; a philosophical case for the Christian faith; see especially Book 1, &ldquo;The Case for Christianity.&rdquo;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="on-ink">
+  <div class="max foot-top">
+    <svg viewBox="0 0 120 120" width="40" height="40" style="display:block;overflow:visible;flex:none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path fill="#E0655F" d="M30 102 C16 94 10 78 14 62 C16 70 20 74 24 75 C18 62 20 48 30 38 C30 46 33 51 37 53 C34 38 40 22 52 12 C50 24 53 32 58 36 C58 24 63 14 70 6 C70 18 74 26 80 32 C82 26 82 20 80 14 C90 24 94 38 90 50 C95 47 98 42 99 36 C106 48 108 62 104 74 C101 70 99 68 96 67 C98 80 94 94 88 102 Z"></path>
+      <path fill="#211F1D" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+      <path fill="#E0655F" fill-opacity="0.22" transform="translate(60 100) scale(0.82) translate(-60 -100)" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+      <g fill="none" stroke="#FFFFFF">
+        <path stroke-width="6" d="M60 101 C58 93 61 87 60 80"></path>
+        <path stroke-width="3.4" d="M60 82 C54 76 46 72 37 66"></path>
+        <path stroke-width="3.4" d="M60 82 C66 76 74 72 83 66"></path>
+        <path stroke-width="3" d="M60 84 C58 72 61 60 60 46"></path>
+        <path stroke-width="2.6" d="M61 97 C68 95 72 90 71 83"></path>
+        <path stroke-width="2" d="M48 72 C46 64 42 58 38 54"></path>
+        <path stroke-width="2" d="M72 72 C74 64 78 58 82 54"></path>
+        <path stroke-width="1.8" d="M60 62 C54 58 50 52 48 46"></path>
+        <path stroke-width="1.8" d="M60 60 C66 56 70 50 72 44"></path>
+      </g>
+      <g fill="#FFFFFF" stroke="#211F1D" stroke-width="0.99" style="paint-order:stroke">
+        <path transform="translate(52.8 65.6) rotate(-32) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(53.3 61.1) rotate(-10) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(57.3 58.1) rotate(-5) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(62.7 58.1) rotate(2) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(66.7 61.1) rotate(7) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(44.5 64.8) rotate(-49) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(45.4 59.5) rotate(-25) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(48.7 55.1) rotate(-20) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(53.9 52.0) rotate(-15) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(60.0 51.0) rotate(-9) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(66.1 52.0) rotate(18) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(71.3 55.1) rotate(23) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(74.6 59.5) rotate(28) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(75.5 64.8) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(37.8 69.0) rotate(-66) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(37.0 63.6) rotate(-42) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(38.0 58.3) rotate(-39) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(40.8 53.3) rotate(-36) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(45.1 49.3) rotate(-32) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(50.6 46.4) rotate(-7) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(56.8 44.9) rotate(-3) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(63.2 44.9) rotate(2) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(69.4 46.4) rotate(6) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(74.9 49.3) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(79.2 53.3) rotate(35) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(82.0 58.3) rotate(38) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(83.0 63.6) rotate(41) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(35.8 58.8) rotate(-54) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(39.1 52.5) rotate(-28) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(44.7 47.4) rotate(-22) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(51.9 44.1) rotate(-15) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(60.0 43.0) rotate(-9) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(68.1 44.1) rotate(18) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(75.3 47.4) rotate(25) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(80.9 52.5) rotate(31) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(84.2 58.8) rotate(36) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+      </g>
+      <path fill="#FFFFFF" stroke="#211F1D" stroke-width="1.2" d="M26 108 L40 99 L50 102 L58 97 L64 101 L72 98 L82 101 L94 108 Z"></path>
+      <path fill="none" stroke="#211F1D" stroke-width="1.2" d="M44 108 L56 102 L68 108"></path>
+    </svg>
+    <span class="wordmark-name">
+      <span class="n1">Grace Fellowship</span>
+      <span class="n2">Bible Presbyterian Church</span>
+    </span>
+  </div>
+  <div class="max">
+    <div>
+      <h4>Visit</h4>
+      <p>Meeting at &mdash; Windsor High School</p>
+      <p>1100 Main Street, Windsor, CO 80550</p>
+      <p style="margin-top:10px">Mailing Address &mdash; 1540 Main St, Suite 218 / 240<br>Windsor, CO 80550</p>
+    </div>
+    <div>
+      <h4>Service Times</h4>
+      <p>Sunday Worship Service: 9:30&nbsp;am</p>
+      <p>Sunday School: 11:15&nbsp;am</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:gracefellowshipbpc@gmail.com">gracefellowshipbpc@gmail.com</a></p>
+      <p style="margin-top:10px"><a href="https://www.gracefellowshipbpc.org/contact-us">Contact Us &rarr;</a></p>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>&copy;2026 by Grace Fellowship Bible Presbyterian Church</span>
+    <span>Windsor, Colorado</span>
+  </div>
+</footer>
+
+</body>
+</html>
