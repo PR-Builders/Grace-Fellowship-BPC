@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What We Believe | Grace Fellowship Bible Presbyterian Church</title>
+<meta name="description" content="Grace Fellowship’s doctrine: the Bible, the sovereignty of God, and the Trinity — summarized at a glance and explained in full, per the Westminster Confession of Faith.">
+<link rel="stylesheet" href="styles.css">
+<style>
+
+
+  .max{max-width:1120px;margin:0 auto;padding:0 32px}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+  /* ---------- header ---------- */
+  header.site{position:sticky;top:0;z-index:40;background:var(--color-bg);border-bottom:1px solid var(--color-divider)}
+  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1120px;margin:0 auto;gap:24px}
+  .wordmark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--color-text);white-space:nowrap}
+  .wordmark-name{display:flex;flex-direction:column;line-height:1.15}
+  .wordmark-name .n1{font-family:var(--font-heading);font-weight:600;font-size:1.15rem}
+  .wordmark-name .n2{font-size:0.62rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--color-neutral-700)}
+  nav.primary{display:flex;align-items:center;gap:28px}
+  nav.primary ul{list-style:none;display:flex;gap:24px;margin:0;padding:0;font-size:0.88rem}
+  nav.primary a{text-decoration:none;color:var(--color-text);border-bottom:1px solid transparent;padding-bottom:3px;transition:border-color .15s ease,color .15s ease}
+  nav.primary a:hover,nav.primary a[aria-current='page']{border-color:var(--color-accent);color:var(--color-accent)}
+  .nav-toggle{display:none}
+  .burger{display:none}
+
+  /* ---------- article ---------- */
+  .article-hero{padding:56px 0 8px}
+  .article-hero .max{max-width:720px}
+  .kicker{font-family:var(--font-heading);font-style:italic;color:var(--color-accent);font-size:0.98rem;margin-bottom:10px;display:block}
+  .article-hero h1{font-size:clamp(2rem,4vw,3rem)}
+  .lede{font-family:var(--font-heading);font-style:italic;font-size:1.25rem;line-height:1.5;margin-top:20px;color:var(--color-text)}
+
+  article.prose{padding:32px 0 72px}
+  article.prose .max{max-width:720px}
+  article.prose p{font-size:1.05rem;line-height:1.75;text-align:justify;hyphens:auto;margin:0 0 22px}
+  article.prose a{text-decoration:underline}
+
+  /* ---------- beliefs at a glance ---------- */
+  .glance{background:var(--color-surface);border-top:1px solid var(--color-divider);border-bottom:1px solid var(--color-divider);padding:56px 0}
+  .glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+  .glance-grid .card-title{margin-top:2px}
+
+  /* ---------- trinity diagram ---------- */
+  .trinity-section{padding:64px 0 8px}
+  .trinity-section .max{max-width:720px}
+  .trinity-diagram{max-width:300px;margin:28px auto 4px;display:block}
+  .td-edge{fill:none;stroke:var(--color-divider);stroke-width:1.5}
+  .td-spoke{fill:none;stroke:var(--color-accent);stroke-width:1.5}
+  .td-vertex-circle{fill:var(--color-bg);stroke:var(--color-text);stroke-width:1.4}
+  .td-center-circle{fill:var(--color-accent);stroke:var(--color-accent)}
+  .td-vertex-label{font-family:var(--font-heading);font-weight:600;font-size:13px;fill:var(--color-text);text-anchor:middle}
+  .td-center-label{font-family:var(--font-heading);font-weight:600;font-size:15px;fill:#FFFFFF;text-anchor:middle;letter-spacing:0.05em}
+  .td-pill{fill:var(--color-bg)}
+  .td-is{font-family:var(--font-heading);font-style:italic;font-weight:600;font-size:11px;fill:var(--color-accent);text-anchor:middle}
+  .td-isnot{font-family:var(--font-heading);font-style:italic;font-size:10px;fill:var(--color-neutral-700);text-anchor:middle}
+  .trinity-caption{text-align:center;font-size:0.92rem;color:var(--color-neutral-700);max-width:480px;margin:12px auto 0}
+
+  /* ---------- nested subsections ---------- */
+  details.subsection{border-bottom:none;margin-left:4px;padding-left:16px;border-left:2px solid var(--color-divider)}
+  details.subsection summary{font-size:1.05rem;padding:16px 0}
+  details.subsection .section-body{padding-bottom:20px}
+  details.subsection + details.subsection{margin-top:0}
+
+
+  /* ---------- accordion ---------- */
+  .accordion-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:36px 0 4px;padding-top:28px;border-top:1px solid var(--color-divider)}
+  .read-time{font-size:0.85rem;color:var(--color-neutral-700)}
+  .toolbar-btns{display:flex;gap:10px}
+  .btn-sm{font-size:12px;padding:6px 14px}
+  .accordion{margin-top:8px}
+  details.section{border-bottom:1px solid var(--color-divider)}
+  details.section summary{
+    display:flex;align-items:baseline;gap:12px;cursor:pointer;list-style:none;
+    padding:22px 0;font-family:var(--font-heading);font-weight:600;font-size:1.25rem;
+  }
+  details.section summary::-webkit-details-marker{display:none}
+  details.section summary::marker{content:""}
+  details.section .chevron{
+    flex:none;color:var(--color-accent);font-size:0.8em;display:inline-block;
+    transition:transform .15s ease;transform:rotate(0deg);
+  }
+  details.section[open] .chevron{transform:rotate(90deg)}
+  details.section summary:hover .section-title{color:var(--color-accent)}
+  details.section .section-body{padding:0 0 28px}
+  details.section .section-body p:last-child{margin-bottom:0}
+
+  blockquote.verse{margin:32px 0;padding:20px 0 20px 24px;border-left:2px solid var(--color-accent)}
+  blockquote.verse p{font-family:var(--font-heading);font-style:italic;font-size:1.15rem;line-height:1.55;text-align:left;hyphens:none;margin:0 0 8px;color:var(--color-text)}
+  blockquote.verse cite{display:block;font-style:normal;font-size:0.82rem}
+  blockquote.verse cite a{color:var(--color-accent);text-decoration:none;border-bottom:1px solid var(--color-accent)}
+
+  p.callout{text-align:center;font-family:var(--font-heading);font-style:italic;font-size:1.4rem;color:var(--color-accent);margin:36px 0}
+
+  /* ---------- learn more ---------- */
+  .learn{background:var(--color-surface);border-top:1px solid var(--color-divider);padding:64px 0 72px}
+  .learn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+  .learn-grid .card ul{list-style:none;margin:8px 0 0;padding:0;font-size:13px}
+  .learn-grid .card li{margin-bottom:6px}
+  .learn-grid .card li a{text-decoration:underline}
+
+  /* ---------- footer (shared with homepage) ---------- */
+  footer.on-ink{background:var(--color-ink);color:var(--color-neutral-300);padding:48px 0 26px;font-size:0.92rem}
+  footer .foot-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:36px}
+  footer .foot-top .wordmark-name .n1{color:#FFFFFF}
+  footer .foot-top .wordmark-name .n2{color:var(--color-neutral-400)}
+  footer .max{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:40px;padding-bottom:30px;border-bottom:1px solid color-mix(in srgb, #FFFFFF 16%, transparent)}
+  footer h4{color:#FFFFFF;font-family:var(--font-heading);font-weight:600;font-size:1rem;margin-bottom:12px}
+  footer p{margin:0 0 6px;color:var(--color-neutral-300)}
+  footer a{color:var(--color-accent-300);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  .copyright{max-width:1120px;margin:18px auto 0;padding:0 32px;font-size:0.78rem;color:var(--color-neutral-500);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1040px){
+    nav.primary ul{display:none}
+    .nav-toggle:checked ~ nav.primary ul{display:flex;flex-direction:column;gap:0;position:absolute;top:100%;left:0;right:0;background:var(--color-bg);border-bottom:1px solid var(--color-divider);padding:8px 32px 18px}
+    nav.primary ul li{border-top:1px solid var(--color-divider)}
+    nav.primary ul li:first-child{border-top:none}
+    nav.primary ul li a{display:block;padding:12px 0}
+    .burger{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:1px solid var(--color-text);cursor:pointer;flex:none}
+    .nav-row{position:relative}
+  }
+  @media (max-width:920px){
+    footer .max{grid-template-columns:1fr;gap:24px}
+  }
+  @media (max-width:760px){
+    .glance-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    article.prose p{text-align:left;hyphens:none}
+  }
+  @media (max-width:520px){
+    .btn.header-visit{display:none}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav-row">
+    <a class="wordmark" href="index.html">
+      <svg viewBox="0 0 120 120" width="34" height="34" style="display:block;overflow:visible;flex:none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+        <path fill="#9E1B22" d="M30 102 C16 94 10 78 14 62 C16 70 20 74 24 75 C18 62 20 48 30 38 C30 46 33 51 37 53 C34 38 40 22 52 12 C50 24 53 32 58 36 C58 24 63 14 70 6 C70 18 74 26 80 32 C82 26 82 20 80 14 C90 24 94 38 90 50 C95 47 98 42 99 36 C106 48 108 62 104 74 C101 70 99 68 96 67 C98 80 94 94 88 102 Z"></path>
+        <path fill="#FFFFFF" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+        <path fill="#9E1B22" fill-opacity="0.22" transform="translate(60 100) scale(0.82) translate(-60 -100)" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+        <g fill="none" stroke="#3B2A1F">
+          <path stroke-width="6" d="M60 101 C58 93 61 87 60 80"></path>
+          <path stroke-width="3.4" d="M60 82 C54 76 46 72 37 66"></path>
+          <path stroke-width="3.4" d="M60 82 C66 76 74 72 83 66"></path>
+          <path stroke-width="3" d="M60 84 C58 72 61 60 60 46"></path>
+          <path stroke-width="2.6" d="M61 97 C68 95 72 90 71 83"></path>
+          <path stroke-width="2" d="M48 72 C46 64 42 58 38 54"></path>
+          <path stroke-width="2" d="M72 72 C74 64 78 58 82 54"></path>
+          <path stroke-width="1.8" d="M60 62 C54 58 50 52 48 46"></path>
+          <path stroke-width="1.8" d="M60 60 C66 56 70 50 72 44"></path>
+        </g>
+        <g fill="#5E6B3A" stroke="#FFFFFF" stroke-width="0.88" style="paint-order:stroke">
+          <path transform="translate(52.8 65.6) rotate(-32) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(53.3 61.1) rotate(-10) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(57.3 58.1) rotate(-5) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(62.7 58.1) rotate(2) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(66.7 61.1) rotate(7) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(44.5 64.8) rotate(-49) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(45.4 59.5) rotate(-25) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(48.7 55.1) rotate(-20) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(53.9 52.0) rotate(-15) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(60.0 51.0) rotate(-9) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(66.1 52.0) rotate(18) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(71.3 55.1) rotate(23) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(74.6 59.5) rotate(28) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(75.5 64.8) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(37.8 69.0) rotate(-66) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(37.0 63.6) rotate(-42) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(38.0 58.3) rotate(-39) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(40.8 53.3) rotate(-36) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(45.1 49.3) rotate(-32) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(50.6 46.4) rotate(-7) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(56.8 44.9) rotate(-3) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(63.2 44.9) rotate(2) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(69.4 46.4) rotate(6) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(74.9 49.3) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(79.2 53.3) rotate(35) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(82.0 58.3) rotate(38) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(83.0 63.6) rotate(41) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(35.8 58.8) rotate(-54) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(39.1 52.5) rotate(-28) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(44.7 47.4) rotate(-22) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(51.9 44.1) rotate(-15) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(60.0 43.0) rotate(-9) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(68.1 44.1) rotate(18) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(75.3 47.4) rotate(25) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(80.9 52.5) rotate(31) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+          <path transform="translate(84.2 58.8) rotate(36) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        </g>
+        <path fill="#3B2A1F" stroke="#FFFFFF" stroke-width="1.2" d="M26 108 L40 99 L50 102 L58 97 L64 101 L72 98 L82 101 L94 108 Z"></path>
+        <path fill="none" stroke="#FFFFFF" stroke-width="1.2" d="M44 108 L56 102 L68 108"></path>
+      </svg>
+      <span class="wordmark-name">
+        <span class="n1">Grace Fellowship</span>
+        <span class="n2">Bible Presbyterian Church</span>
+      </span>
+    </a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <nav class="primary">
+      <ul>
+        <li><a href="gospel.html">The Gospel</a></li>
+        <li><a href="what-we-believe.html" aria-current="page">What We Believe</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/theology-of-church">Theology of Church</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/about-5-1">Sermons</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/blog">Blog</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/shepherds">Shepherds</a></li>
+        <li><a href="https://www.gracefellowshipbpc.org/contact-us">Contact Us</a></li>
+      </ul>
+      <label class="burger" for="nav-toggle">
+        <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 1h18M0 7h18M0 13h18"/></svg>
+      </label>
+      <a class="btn btn-primary header-visit" href="index.html#visit">Visit Us</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="article-hero">
+    <div class="max">
+      <span class="kicker">Our Doctrine</span>
+      <h1 class="display">What We Believe</h1>
+      <p class="lede">One God, revealed in His Word, ruling all things, in three persons.</p>
+    </div>
+  </div>
+
+  <article class="prose">
+    <div class="max">
+      <p>Grace Fellowship Bible Presbyterian Church adheres to the <a href="https://biblepresbyterianchurch.org/wcf" target="_blank" rel="noopener">Westminster Confession of Faith</a>, the <a href="https://biblepresbyterianchurch.org/shorter-catechism" target="_blank" rel="noopener">Westminster Shorter Catechism</a>, and the <a href="https://biblepresbyterianchurch.org/larger-catechism" target="_blank" rel="noopener">Westminster Larger Catechisms</a> as our doctrinal statement of faith.</p>
+      <p>Following is a summary of some of our essential beliefs, including our view on the importance of confessions.</p>
+    </div>
+  </article>
+
+  <section class="glance">
+    <div class="max">
+      <span class="kicker">At a Glance</span>
+      <h2 style="margin:0 0 4px">Three Convictions Everything Else Rests On</h2>
+      <div class="glance-grid">
+        <div class="card">
+          <span class="card-kicker">01 &middot; The Bible</span>
+          <p class="card-body">God&rsquo;s Word, complete and true. The 66 books of Scripture are inerrant and sufficient for every part of life, and the only foundation for saving faith.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">02 &middot; The Sovereignty of God</span>
+          <p class="card-body">God rules everything. From empires to sparrows, nothing in creation falls outside His purposeful, good, and unshakable control.</p>
+        </div>
+        <div class="card">
+          <span class="card-kicker">03 &middot; The Trinity</span>
+          <p class="card-body">One God, three persons. The Father, the Son, and the Holy Spirit are each fully God, co-equal and co-eternal &mdash; yet there is only one God.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trinity-section">
+    <div class="max">
+      <span class="kicker">Hardest to picture, easiest to confuse</span>
+      <h2 style="margin:0 0 4px">The Trinity, at a Glance</h2>
+      <svg class="trinity-diagram" viewBox="0 0 340 320" role="img" aria-labelledby="trinityTitle trinityDesc">
+        <title id="trinityTitle">The Holy Trinity</title>
+        <desc id="trinityDesc">The Father is God, the Son is God, and the Holy Spirit is God. The Father is not the Son, the Son is not the Holy Spirit, and the Holy Spirit is not the Father. There is one God.</desc>
+        <path class="td-edge" d="M170 50 L50 260 L290 260 Z"></path>
+        <line class="td-spoke" x1="170" y1="50" x2="170" y2="190"></line>
+        <line class="td-spoke" x1="50" y1="260" x2="170" y2="190"></line>
+        <line class="td-spoke" x1="290" y1="260" x2="170" y2="190"></line>
+        <g>
+          <rect class="td-pill" x="158" y="112" width="24" height="16" rx="3"></rect>
+          <text class="td-is" x="170" y="124">IS</text>
+          <rect class="td-pill" x="98" y="217" width="24" height="16" rx="3"></rect>
+          <text class="td-is" x="110" y="229">IS</text>
+          <rect class="td-pill" x="218" y="217" width="24" height="16" rx="3"></rect>
+          <text class="td-is" x="230" y="229">IS</text>
+        </g>
+        <g>
+          <rect class="td-pill" x="85" y="147" width="50" height="14" rx="3"></rect>
+          <text class="td-isnot" x="110" y="157">IS NOT</text>
+          <rect class="td-pill" x="205" y="147" width="50" height="14" rx="3"></rect>
+          <text class="td-isnot" x="230" y="157">IS NOT</text>
+          <rect class="td-pill" x="145" y="253" width="50" height="14" rx="3"></rect>
+          <text class="td-isnot" x="170" y="263">IS NOT</text>
+        </g>
+        <circle class="td-vertex-circle" cx="170" cy="50" r="40"></circle>
+        <text class="td-vertex-label" x="170" y="55">FATHER</text>
+        <circle class="td-vertex-circle" cx="50" cy="260" r="40"></circle>
+        <text class="td-vertex-label" x="50" y="265">SON</text>
+        <circle class="td-vertex-circle" cx="290" cy="260" r="40"></circle>
+        <text class="td-vertex-label" x="290" y="258">HOLY</text>
+        <text class="td-vertex-label" x="290" y="272">SPIRIT</text>
+        <circle class="td-center-circle" cx="170" cy="190" r="40"></circle>
+        <text class="td-center-label" x="170" y="195">GOD</text>
+      </svg>
+      <p class="trinity-caption">A pattern Christians have used for centuries to hold the doctrine together: each person named at a corner <em>is</em> God, but is not each other person. Yet there are not three Gods &mdash; there is one.</p>
+    </div>
+  </section>
+
+  <article class="prose">
+    <div class="max">
+
+      <div class="accordion-toolbar">
+        <span class="read-time">3 core doctrines, 12 sub-topics &middot; expand any you want to read in full</span>
+        <div class="toolbar-btns">
+          <button type="button" class="btn btn-secondary btn-sm" data-accordion-action="expand">Expand All</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-accordion-action="collapse">Collapse All</button>
+        </div>
+      </div>
+
+      <div class="accordion" id="wwb-accordion">
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Bible</span></summary>
+        <div class="section-body">
+      <p>We believe that the 66 books of the Bible in their entirety are the Word of God given to us so that we might know and love God and so that we might know His great love for us.</p>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God Spoke</span></summary>
+            <div class="section-body">
+      <blockquote class="verse">
+        <p>Long ago, at many times and in many ways, God spoke to our fathers by the prophets, but in these last days he has spoken to us by his Son, whom he appointed the heir of all things, through whom also he created the world.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+1%3A1-2&version=ESV" target="_blank" rel="noopener">Hebrews 1:1-2</a></cite>
+      </blockquote>
+      <p>God is relational in His very nature. He wants us to know Him. He wants us to know the good He has for us.</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Sufficiency of Scripture</span></summary>
+            <div class="section-body">
+      <blockquote class="verse">
+        <p>All Scripture is breathed out by God and profitable for teaching, for reproof, for correction, and for training in righteousness, that the man of God may be complete, equipped for every good work.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=2+Timothy+3%3A16-17&version=ESV" target="_blank" rel="noopener">2 Timothy 3:16-17</a></cite>
+      </blockquote>
+      <p>We believe first that the Bible is inerrant and infallible. All that it teaches is absolutely true and certain. More than this, we believe that the Bible is sufficient for all of life and godliness. God wrote the Bible, He put in all that we need for every area of life. Whether it be how to worship God, how to be saved from our sin, how to live a holy life, how to live rightly in marriage, how to raise children, how to conduct business, or how to govern a nation, the Bible is the first and primary source of God’s wisdom and directions.</p>
+      <p><a href="https://www.biblegateway.com/passage/?search=2+Timothy+3%3A17&version=ESV" target="_blank" rel="noopener">2 Timothy 3:17</a> tells us that, by the Word of God, a man may be complete, equipped for every good work. This is the sufficiency of Scripture</p>
+      <p>Scripture is inerrant and infallible in the original manuscripts, in the original languages of Greek and Hebrew. However, Scripture must be accessible to all through translations. We have the original manuscripts to an incredible degree of accuracy and we have many faithful translations into English.</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Scripture is necessary for Faith</span></summary>
+            <div class="section-body">
+      <blockquote class="verse">
+        <p>These are written that you may believe that Jesus is the Christ, the Son of God, and that believing you may have life in His name.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+20%3A31&version=ESV" target="_blank" rel="noopener">John 20:31</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>So then faith comes by hearing, and hearing by the word of God.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+10%3A17&version=ESV" target="_blank" rel="noopener">Romans 10:17</a></cite>
+      </blockquote>
+      <p>The Bible tells us about God’s eternal plan to save sinful human beings. We teach salvation through Jesus Christ alone because this is what the Bible teaches.</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Scripture is not passive</span></summary>
+            <div class="section-body">
+      <blockquote class="verse">
+        <p>For the word of God is living and active, sharper than any two-edged sword, piercing to the division of soul and of spirit, of joints and of marrow, and discerning the thoughts and intentions of the heart. And no creature is hidden from his sight, but all are naked and exposed to the eyes of him to whom we must give account.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+4%3A12-13&version=ESV" target="_blank" rel="noopener">Hebrews 4:12-13</a></cite>
+      </blockquote>
+      <p>God’s Spirit works through God’s Word to show us the true nature of our heart and, thereby, our need for salvation in Jesus.</p>
+            </div>
+          </details>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Sovereignty of God</span></summary>
+        <div class="section-body">
+      <p>God is the sovereign Creator of all things. He is outside of space and time. He is before time. All that we know or can know came from God’s creative power. This alone makes God the ruler of all things, including each of our lives.</p>
+      <blockquote class="verse">
+        <p>In the beginning, God created the heavens and the earth.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Genesis+1%3A1&version=ESV" target="_blank" rel="noopener">Genesis 1:1</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>The LORD has established his throne in the heavens, and his kingdom rules over all.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Psalm+103%3A19&version=ESV" target="_blank" rel="noopener">Psalm 103:19</a></cite>
+      </blockquote>
+      <p>God did not create all things and then stand back to see what would happen. God remains the sovereign ruler of all things in creation at all times. We call this God’s providence. By His providence, God has decreed all things for all time. There is nothing outside of God’s sovereign rule and power, including each of our lives.</p>
+      <blockquote class="verse">
+        <p>For I am God, and there is no other; I am God, and there is none like me, declaring the end from the beginning and from ancient times things not yet done, saying, ‘My counsel shall stand, and I will accomplish all my purpose,’…have spoken, and I will bring it to pass; I have purposed, and I will do it.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Isaiah+46%3A9-11&version=ESV" target="_blank" rel="noopener">Isaiah 46:9-11</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Are not two sparrows sold for a penny? And not one of them will fall to the ground apart from your Father. But even the hairs of your head are all numbered. Fear not, therefore; you are of more value than many sparrows.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+10%3A29-31&version=ESV" target="_blank" rel="noopener">Matthew 10:29-31</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>He who did not spare his own Son but gave him up for us all, how will he not also with him graciously give us all things?...For I am sure that neither death nor life, nor angels nor rulers, nor things present nor things to come, nor powers, nor height nor depth, nor anything else in all creation, will be able to separate us from the love of God in Christ Jesus our Lord.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+8%3A32-39&version=ESV" target="_blank" rel="noopener">Romans 8:32, 38&ndash;39</a></cite>
+      </blockquote>
+      <p>God’s providence gives believers great comfort in life for God is good and all that He does is good. If God were not all powerful over all things, how could He declare that He can and will accomplish His will for good? How could we pray to Him with hope? But, God is the absolutely sovereign power in the universe and so we can cast our lives entirely into His care.</p>
+      <blockquote class="verse">
+        <p>Being confident of this very thing, that He who has begun a good work in you will complete it until the day of Jesus Christ.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Philippians+1%3A6&version=ESV" target="_blank" rel="noopener">Philippians 1:6</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For it is God who works in you both to will and to do for His good pleasure.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Philippians+2%3A13&version=ESV" target="_blank" rel="noopener">Philippians 2:13</a></cite>
+      </blockquote>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Trinity</span></summary>
+        <div class="section-body">
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God is One God</span></summary>
+            <div class="section-body">
+      <blockquote class="verse">
+        <p>Hear, O Israel: The LORD our God, the LORD is one.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Deuteronomy+6%3A4&version=ESV" target="_blank" rel="noopener">Deuteronomy 6:4</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>I am the LORD, and there is no other, besides me there is no God;</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Isaiah+45%3A5&version=ESV" target="_blank" rel="noopener">Isaiah 45:5</a></cite>
+      </blockquote>
+      <p>God is one God. This is the foundation of all understanding of God and reality.</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God is One God in Three Persons</span></summary>
+            <div class="section-body">
+      <p>God is three persons in one God forever. There has never been a time and there will be no time that God is not three persons in one God. We know this because the Bible tells us that the Father is God, the Son, Jesus, is God, and the Holy Spirit is God. Each fully God; each equal in the glory of God; each acting with the power of God; each accomplishing the purposes of God. Yet, all are one God, united in one being, God.</p>
+      <p>Yes, this is outside of our normal experience. But we trust that God is faithful in all that He reveals of Himself to us, both in nature and scripture.</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Jesus is God</span></summary>
+            <div class="section-body">
+      <p>The Bible tells us that Jesus was with God and that He was God. How can He be both with God and be God? Only if God is a Trinity.</p>
+      <p>Jesus was there at creation and all things were Created through Him. As God, He is the source of life.</p>
+      <blockquote class="verse">
+        <p>In the beginning was the Word, and the Word was with God, and the Word was God. He was in the beginning with God. All things were made through him, and without him was not any thing made that was made. In him was life, and the life was the light of men.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+1%3A1-4&version=ESV" target="_blank" rel="noopener">John 1:1-4</a></cite>
+      </blockquote>
+      <p>Jesus Himself claimed to be God many times. The Jews of the time did not mistake His claims to the very name of God revealed to Moses in the Book of Exodus. For this reason, they often sought to stone Him for blasphemy, that is, making Himself God.</p>
+      <blockquote class="verse">
+        <p>Jesus said to them, “Truly, truly, I say to you, before Abraham was, I am.”</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+8%3A58&version=ESV" target="_blank" rel="noopener">John 8:58</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Jesus said to her, “I am the resurrection and the life. Whoever believes in me, though he die, yet shall he live, and everyone who lives and believes in me shall never die. Do you believe this?”</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+11%3A25-26&version=ESV" target="_blank" rel="noopener">John 11:25-26</a></cite>
+      </blockquote>
+      <p>Furthermore, Jesus, over and over again, did what only God could do. He forgave sins, raised the dead to life, opened the eyes of the blind and the ears of the deaf. He walked on water and command a storm to stop and immediately it obeyed.</p>
+      <blockquote class="verse">
+        <p>Believe me that I am in the Father and the Father is in me, or else believe on account of the works themselves.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+14%3A11&version=ESV" target="_blank" rel="noopener">John 14:11</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>And he awoke and rebuked the wind and said to the sea, “Peace! Be still!” And the wind ceased, and there was a great calm. He said to them, “Why are you so afraid? Have you still no faith?” And they were filled with great fear and said to one another, “Who then is this, that even the wind and the sea obey him?”</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Mark+4%3A39-41&version=ESV" target="_blank" rel="noopener">Mark 4:39-41</a></cite>
+      </blockquote>
+      <p>Then as a certain testimony to His deity, Jesus rose from the dead. His resurrection sealed His victory over death and His claim to be God. When Jesus rose from the dead, He appeared to more than 500 people over a period of 40 days.</p>
+      <blockquote class="verse">
+        <p>For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures, and that he appeared to Cephas, then to the twelve. Then he appeared to more than five hundred brothers at one time, most of whom are still alive, though some have fallen asleep.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A3-6&version=ESV" target="_blank" rel="noopener">1 Corinthians 15:3-6</a></cite>
+      </blockquote>
+      <p>Those who knew Jesus best, who walked with Him and saw all that He did were left with the certain knowledge that Jesus was God of very God and so they devoted their lives to Him.</p>
+      <blockquote class="verse">
+        <p>Waiting for our blessed hope, the appearing of the glory of our great God and Savior Jesus Christ, who gave himself for us to redeem us from all lawlessness and to purify for himself a people for his own possession who are zealous for good works.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Titus+2%3A13-14&version=ESV" target="_blank" rel="noopener">Titus 2:13-14</a></cite>
+      </blockquote>
+      <p>This verse equates, “Our great God,” with, “Savior Jesus Christ.” The disciples knew that God had walked among them and so, they waited “for our blessed hope, the appearing of the glory of our great God and Savior Jesus Christ.”</p>
+      <p>Jesus is God!</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Holy Spirit is God</span></summary>
+            <div class="section-body">
+      <p>The Holy Spirit is God. He is a relational person. That is, He is not an impersonal force that people can simply draw upon. Rather, as God, The Holy Spirit loves God’s people and is actively at work in their salvation and perseverance in life.</p>
+      <p>The Holy Spirit was before creation. He is God who worked in the creation of all things.</p>
+      <blockquote class="verse">
+        <p>In the beginning God created the heavens and the earth. The earth was without form, and void; and darkness was over the face of the deep. And the Spirit of God was hovering over the face of the waters.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Genesis+1%3A1-2&version=ESV" target="_blank" rel="noopener">Genesis 1:1-2</a></cite>
+      </blockquote>
+      <p>The Holy Spirit is from God and acts with the purposes of God.</p>
+      <blockquote class="verse">
+        <p>Now we have received not the spirit of the world, but the Spirit who is from God, that we might understand the things freely given us by God.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+2%3A12&version=ESV" target="_blank" rel="noopener">1 Corinthians 2:12</a></cite>
+      </blockquote>
+      <p>The Holy Spirit is able to accomplish what only God can do. Namely, the Holy Spirit can renew the human heart to salvation</p>
+      <blockquote class="verse">
+        <p>He saved us, not because of works done by us in righteousness, but according to his own mercy, by the washing of regeneration and renewal of the Holy Spirit, whom he poured out on us richly through Jesus Christ our Savior, so that being justified by his grace we might become heirs according to the hope of eternal life..</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Titus+3%3A5-7&version=ESV" target="_blank" rel="noopener">Titus 3:5-7</a></cite>
+      </blockquote>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Father is God</span></summary>
+            <div class="section-body">
+      <p>God the Father spoke creation into existence. Scripture tells us that God is Spirit. That is, He is not of this world. He is above and before the universe He created. God the Father is actively involved in ruling all things that come to pass by the might of His providential care. He established His law and commands for all human beings to live by His standard of good. Thus, God the Father is pictured as a righteous King. He is all powerful, all knowing, just, merciful, and perfectly righteous.</p>
+      <blockquote class="verse">
+        <p>In the beginning, God created the heavens and the earth.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Genesis+1%3A1&version=ESV" target="_blank" rel="noopener">Genesis 1:1</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Your throne, O God, is forever and ever. The scepter of your kingdom is a scepter of uprightness.</p>
+        <cite><a href="http://biblegateway.com/passage/?search=Psalms+45%3A6&version=ESV" target="_blank" rel="noopener">Psalms 45:6</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>God is Spirit, and those who worship Him must worship in spirit and truth.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+4%3A24&version=ESV" target="_blank" rel="noopener">John 4:24</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>But will God indeed dwell on the earth? Behold, heaven and the heaven of heavens cannot contain You. How much less this temple which I have built!</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Kings+8%3A27&version=ESV" target="_blank" rel="noopener">1 Kings 8:27</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>To the King of the ages, immortal, invisible, the only God, be honor and glory forever and ever. Amen.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Timothy+1%3A17&version=ESV" target="_blank" rel="noopener">1 Timothy 1:17</a></cite>
+      </blockquote>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Father, Son, and Holy Spirit Appear Together in Scripture as One God</span></summary>
+            <div class="section-body">
+      <p>When Jesus was baptized by John the Baptist, The Father declared Jesus to be the Son of God by sending the Holy Spirit and by His direct voice</p>
+      <blockquote class="verse">
+        <p>And when Jesus was baptized, immediately he went up from the water, and behold, the heavens were opened to him, and he saw the Spirit of God descending like a dove and coming to rest on him; and behold, a voice from heaven said, “This is my beloved Son, with whom I am well pleased.”</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+3%3A16-17&version=ESV" target="_blank" rel="noopener">Matthew 3:16-17</a></cite>
+      </blockquote>
+      <p>Jesus sends His disciples out into the world specifically in the name of the Triune God, Father, Son and Holy Spirit.</p>
+      <blockquote class="verse">
+        <p>Go therefore and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+28%3A19&version=ESV" target="_blank" rel="noopener">Matthew 28:19</a></cite>
+      </blockquote>
+      <p>The Trinity is one of the most fundamental of Christian doctrines because it forms the basis for how God Himself has revealed Himself to be. The Trinity is necessary to all else that God reveals of Himself. If God were not a Trinity, we would not be able to know Him, salvation through the atonement of Jesus would not be possible, and we would live life alone, without the presence of God.</p>
+      <p>While human invented “unitarian,” or “Monistic,” gods are easier to fit into the human mind, all human religions that turn to a unitarian god ultimately lose the ability to know their god. A god cannot be unitarian and personally knowable at the same time. This includes most human religions over the ages, including modern new age pantheism. On the other hand, those human religions that turn to many god’s also lose the ability to know a personal god. Many gods always devolves into unknowable chaos. Only the Christian Trinity accounts for the nature of reality and the true love of the Creator for His people.</p>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Special Role of the Son of God</span></summary>
+            <div class="section-body">
+      <p>The Son of God took on human flesh primarily so that He might destroy the power of sin by forgiveness and, thereby, restore humans to a right relationship to God. Death came into the world because of Adam’s sin; life was restored through Jesus Christ.</p>
+      <blockquote class="verse">
+        <p>Therefore, just as sin came into the world through one man, and death through sin, and so death spread to all men because all sinned</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+5%3A12&version=ESV" target="_blank" rel="noopener">Romans 5:12</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For if, because of one man’s trespass, death reigned through that one man, much more will those who receive the abundance of grace and the free gift of righteousness reign in life through the one man Jesus Christ.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+5%3A17&version=ESV" target="_blank" rel="noopener">Romans 5:17</a></cite>
+      </blockquote>
+      <p>Thus, God the Son, had to fully take on human nature so that He could restore fallen humans to the eternal life God intended them to have.</p>
+      <blockquote class="verse">
+        <p>Since therefore the children share in flesh and blood, he himself likewise partook of the same things, that through death he might destroy the one who has the power of death, that is, the devil, and deliver all those who through fear of death were subject to lifelong slavery.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+2%3A14-15&version=ESV" target="_blank" rel="noopener">Hebrews 2:14-15</a></cite>
+      </blockquote>
+      <p>Thus, the Son of God came to earth specifically to die and be raised again from the dead and thereby destroy the power of death.</p>
+      <blockquote class="verse">
+        <p>He entered once for all into the holy places, not by means of the blood of goats and calves but by means of his own blood, thus securing an eternal redemption…</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+9%3A12&version=ESV" target="_blank" rel="noopener">Hebrews 9:12</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Therefore he is the mediator of a new covenant, so that those who are called may receive the promised eternal inheritance, since a death has occurred that redeems them from the transgressions committed under the first covenant.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews%209%3A15&version=ESV" target="_blank" rel="noopener">Hebrews 9:15</a></cite>
+      </blockquote>
+      <p>Jesus came to destroying the power of death and, thereby, free all who call upon Him from the fear of death.</p>
+      <blockquote class="verse">
+        <p>Since therefore the children share in flesh and blood, he himself likewise partook of the same things, that through death he might destroy the one who has the power of death, that is, the devil, and deliver all those who through fear of death were subject to lifelong slavery.</p>
+        <cite>Hebrews 2:14-15</cite>
+      </blockquote>
+      <p>Jesus came to take on Himself the full wrath of God on sin. Thereby, there is no more wrath for sin left for those who have faith in Jesus. God's justice perfectly executes the just demand for Jesus to suffer and die in our place. Because of His great love, God is willing to meet such a demand.</p>
+      <blockquote class="verse">
+        <p>Christ redeemed us from the curse of the law by becoming a curse for us—for it is written, “Cursed is everyone who is hanged on a tree.”</p>
+        <cite>Galatians 3:13</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>[Jesus] is the propitiation for our sins, and not for ours only but also for the sins of the whole world.<br>Jesus came that by His suffering our souls might be healed.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+John+2%3A2&version=ESV" target="_blank" rel="noopener">1 John 2:2</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Surely he has borne our griefs and carried our sorrows;<br>yet we esteemed him stricken, smitten by God, and afflicted.<br>But he was pierced for our transgressions;<br>he was crushed for our iniquities;<br>upon him was the chastisement that brought us peace,<br>and with his wounds we are healed.</p>
+        <cite>Isaiah 53:4&ndash;5</cite>
+      </blockquote>
+      <p>Jesus came to rise from the dead to give eternal life to all who call on Him.</p>
+      <blockquote class="verse">
+        <p>For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures.</p>
+        <cite>1 Corinthians 15:3-4</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>If in Christ we have hope in this life only, we are of all people most to be pitied. But in fact Christ has been raised from the dead, the firstfruits of those who have fallen asleep. For as by a man came death, by a man has come also the resurrection of the dead. For as in Adam all die, so also in Christ shall all be made alive.</p>
+        <cite>1 Corinthians 15:19-22</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>And this is the testimony, that God gave us eternal life, and this life is in his Son.</p>
+        <cite>1 John 5:11</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.</p>
+        <cite>Romans 6:23</cite>
+      </blockquote>
+      <p>Jesus came among us to show us God’s great love for His people, even while we were still sinners in rebellion against God.</p>
+      <blockquote class="verse">
+        <p>“For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life.</p>
+        <cite>John 3:16</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>but God shows his love for us in that while we were still sinners, Christ died for us.</p>
+        <cite>Romans 5:8</cite>
+      </blockquote>
+      <p>Jesus came to give us a clean slate before God. There is no salvation by balancing the records. There is only salvation by canceling records. The record of our bad deeds (including our defective good deeds), along with the just penalties that each deserves, must be blotted out—not balanced. This is what Christ suffered and died to accomplish.[2]</p>
+      <blockquote class="verse">
+        <p>And you, who were dead in your trespasses and the uncircumcision of your flesh, God made alive together with him, having forgiven us all our trespasses, by canceling the record of debt that stood against us with its legal demands. This he set aside, nailing it to the cross.</p>
+        <cite>Colossians 2:13-14</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Christ loved the church and gave himself up for her, that he might sanctify her, having cleansed her by the washing of water with the word, so that he might present the church to himself in splendor, without spot or wrinkle or any such thing, that she might be holy and without blemish.</p>
+        <cite>Ephesians 5:25b-27</cite>
+      </blockquote>
+      <p>Jesus personally declared who God is so that we might know and love Him.</p>
+      <blockquote class="verse">
+        <p>No one has seen God at any time. The only begotten Son, who is in the bosom of the Father, He has declared Him.</p>
+        <cite>John 1:18</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>He is the radiance of the glory of God and the exact imprint of his nature.</p>
+        <cite>Hebrews 1:3a</cite>
+      </blockquote>
+      <p>Jesus is a faithful High Priest who can sympathize with our weaknesses and who intercedes for us in heaven.</p>
+      <blockquote class="verse">
+        <p>For we do not have a high priest who is unable to sympathize with our weaknesses, but one who in every respect has been tempted as we are, yet without sin. Let us then with confidence draw near to the throne of grace, that we may receive mercy and find grace to help in time of need.</p>
+        <cite>Hebrews 4:15-16</cite>
+      </blockquote>
+      <p><strong>Jesus rose a victor</strong></p>
+      <p><strong>Jesus is ruler of the church – head of his body</strong></p>
+      <blockquote class="verse">
+        <p>built on the foundation of the apostles and prophets, Christ Jesus himself being the cornerstone</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Ephesians+2%3A20&version=ESV" target="_blank" rel="noopener">Ephesians 2:20</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>And not only that, but we also rejoice in God through our Lord Jesus Christ, through whom we have now received the reconciliation.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+5%3A11&version=ESV" target="_blank" rel="noopener">Romans 5:11</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>looking unto Jesus, the author and finisher of our faith, who for the joy that was set before Him endured the cross, despising the shame, and has sat down at the right hand of the throne of God.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+12%3A2-3&version=ESV" target="_blank" rel="noopener">Hebrews 12:2-3</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>God is faithful, by whom you were called into the fellowship of His Son, Jesus Christ our Lord.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+1%3A9&version=ESV" target="_blank" rel="noopener">1 Corinthians 1:9</a></cite>
+      </blockquote>
+      <p><strong>Eternal &mdash; part of being God</strong></p>
+      <blockquote class="verse">
+        <p>Jesus Christ is the same yesterday, today, and forever.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Hebrews+13%3A8&version=ESV" target="_blank" rel="noopener">Hebrews 13:8</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Jesus said to him, "Have I been with you so long, and yet you have not known Me, Philip? He who has seen Me has seen the Father; so how can you say, 'Show us the Father'? Do you not believe that I am in the Father, and the Father in Me?</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+14%3A9-10&version=ESV" target="_blank" rel="noopener">John 14:9-10</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>The beginning of the gospel of Jesus Christ, the Son of God.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Mark+1%3A1&version=ESV" target="_blank" rel="noopener">Mark 1:1</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For there is one God and one Mediator between God and men, the Man Christ Jesus,</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Timothy+2%3A5&version=ESV" target="_blank" rel="noopener">1 Timothy 2:5</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>But while he thought about these things, behold, an angel of the Lord appeared to him in a dream, saying, "Joseph, son of David, do not be afraid to take to you Mary your wife, for that which is conceived in her is of the Holy Spirit. And she will bring forth a Son, and you shall call His name Jesus, for He will save His people from their sins."</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+1%3A20-21&version=ESV" target="_blank" rel="noopener">Matthew 1:20-21</a></cite>
+      </blockquote>
+      <p>Jesus came to declare who God is so that we might know and love Him.</p>
+      <blockquote class="verse">
+        <p>No one has seen God at any time. The only begotten Son, who is in the bosom of the Father, He has declared Him.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+1%3A18&version=ESV" target="_blank" rel="noopener">John 1:18</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>This Jesus is the stone that was rejected by you, the builders, which has become the cornerstone. And there is salvation in no one else, for there is no other name under heaven given among men by which we must be saved.”</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Acts+4%3A11-12&version=ESV" target="_blank" rel="noopener">Acts 4:11-12</a></cite>
+      </blockquote>
+      <p><strong>Jesus will come again:</strong></p>
+      <blockquote class="verse">
+        <p>Who also said, "Men of Galilee, why do you stand gazing up into heaven? This same Jesus, who was taken up from you into heaven, will so come in like manner as you saw Him go into heaven."</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Acts+1%3A11&version=ESV" target="_blank" rel="noopener">Acts 1:11</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For the Lord himself will descend from heaven with a cry of command, with the voice of an archangel, and with the sound of the trumpet of God. And the dead in Christ will rise first. 17 Then we who are alive, who are left, will be caught up together with them in the clouds to meet the Lord in the air, and so we will always be with the Lord. 18 Therefore encourage one another with these words.</p>
+        <cite>1 Thessalonians 4:16-18</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For you yourselves are fully aware that the day of the Lord will come like a thief in the night.</p>
+        <cite>1 Thessalonians 5:2</cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>But the free gift is not like the trespass. For if many died through one man's trespass, much more have the grace of God and the free gift by the grace of that one man Jesus Christ abounded for many. And the free gift is not like the result of that one man's sin. For the judgment following one trespass brought condemnation, but the free gift following many trespasses brought justification. For if, because of one man's trespass, death reigned through that one man, much more will those who receive the abundance of grace and the free gift of righteousness reign in life through the one man Jesus Christ. Therefore, as one trespass led to condemnation for all men, so one act of righteousness leads to justification and life for all men. For as by the one man's disobedience the many were made sinners, so by the one man's obedience the many will be made righteous. Now the law came in to increase the trespass, but where sin increased, grace abounded all the more, so that, as sin reigned in death, grace also might reign through righteousness leading to eternal life through Jesus Christ our Lord.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+5%3A15-21&version=ESV" target="_blank" rel="noopener">Romans 5:15-21</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For the wages of sin is death, but the free gift of God is eternal life in Christ Jesus our Lord.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+6%3A23&version=ESV" target="_blank" rel="noopener">Romans 6:23</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Jesus said to him, "I am the way, the truth, and the life. No one comes to the Father except through Me.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+14%3A6&version=ESV" target="_blank" rel="noopener">John 14:6</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>being justified freely by His grace through the redemption that is in Christ Jesus, whom God set forth as a propitiation by His blood, through faith, to demonstrate His righteousness, because in His forbearance God had passed over the sins that were previously committed, to demonstrate at the present time His righteousness, that He might be just and the justifier of the one who has faith in Jesus.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+3%3A24-26&version=ESV" target="_blank" rel="noopener">Romans 3:24-26</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>"All that the Father giveth me shall come to me; and him that cometh to me I will in no wise cast out. For I came down from heaven, not to do mine own will, but the will of him that sent me. And this is the Father's will which hath sent me, that of all which he hath given me I should lose nothing, but should raise it up again at the last day. And this is the will of him that sent me, that every one which seeth the Son, and believeth on him, may have everlasting life: and I will raise him up at the last day."</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+6%3A37-40&version=ESV" target="_blank" rel="noopener">John 6:37-40</a></cite>
+      </blockquote>
+      <p>And if Christ has not been raised, your faith is futile and you are still in your sins. Then those also who have fallen asleep in Christ have perished. If in Christ we have hope in this life only, we are of all people most to be pitied.</p>
+      <blockquote class="verse">
+        <p>But in fact Christ has been raised from the dead, the firstfruits of those who have fallen asleep. For as by a man came death, by a man has come also the resurrection of the dead. For as in Adam all die, so also in Christ shall all be made alive.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+15%3A17-22&version=ESV" target="_blank" rel="noopener">1 Corinthians 15:17-22</a></cite>
+      </blockquote>
+            </div>
+          </details>
+          <details class="subsection">
+            <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Special Role of the Holy Spirit</span></summary>
+            <div class="section-body">
+      <p>The Holy Spirit is the person of the Trinity most directly involved in our personal lives.</p>
+      <p>The Holy Spirit interprets Scripture in our heart. Without the work of the Spirit we would not know or experience the fulness of what God has spoken.</p>
+      <blockquote class="verse">
+        <p>But the Helper, the Holy Spirit, whom the Father will send in my name, he will teach you all things and bring to your remembrance all that I have said to you.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+14%3A26&version=ESV" target="_blank" rel="noopener">John 14:26</a></cite>
+      </blockquote>
+      <p>The Holy Spirit is received by all believers by God’s divine action.</p>
+      <blockquote class="verse">
+        <p>And divided tongues as of fire appeared to them and rested on each one of them. And they were all filled with the Holy Spirit and began to speak in other tongues as the Spirit gave them utterance.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Acts+2%3A3-4&version=ESV" target="_blank" rel="noopener">Acts 2:3-4</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Then Peter said to them, "Repent, and let every one of you be baptized in the name of Jesus Christ for the remission of sins; and you shall receive the gift of the Holy Spirit.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Acts+2%3A38&version=ESV" target="_blank" rel="noopener">Acts 2:38</a></cite>
+      </blockquote>
+      <p>The Holy Spirit regenerates an unbeliever&rsquo;s heart. Without regeneration, we can neither see, nor respond to the kingdom of heaven.</p>
+      <blockquote class="verse">
+        <p>Not by works of righteousness which we have done, but according to His mercy He saved us, through the washing of regeneration and renewing of the Holy Spirit.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Titus+3%3A5&version=ESV" target="_blank" rel="noopener">Titus 3:5</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>Jesus answered him, “Truly, truly, I say to you, unless one is born again he cannot see the kingdom of God.”…The wind blows where it wishes, and you hear its sound, but you do not know where it comes from or where it goes. So it is with everyone who is born of the Spirit.”</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+3%3A3-8&version=ESV" target="_blank" rel="noopener">John 3:3, 8</a></cite>
+      </blockquote>
+      <p>The Holy Spirit convicts people of sin so they might turn to God in Repentance</p>
+      <blockquote class="verse">
+        <p>And when he comes, he will convict the world concerning sin and righteousness and judgment.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=John+16%3A8&version=ESV" target="_blank" rel="noopener">John 16:8</a></cite>
+      </blockquote>
+      <p>The Holy Spirit is active throughout a believer&rsquo;s life making their lives more holy, sanctified, and good.</p>
+      <blockquote class="verse">
+        <p>But we ought always to give thanks to God for you, brothers beloved by the Lord, because God chose you as the firstfruits to be saved, through sanctification by the Spirit and belief in the truth.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=2+Thessalonians+2%3A13&version=ESV" target="_blank" rel="noopener">2 Thessalonians 2:13</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>But the fruit of the Spirit is love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control; against such things there is no law.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Galatians+5%3A22-23&version=ESV" target="_blank" rel="noopener">Galatians 5:22-23</a></cite>
+      </blockquote>
+      <p>The Holy Spirit is an internal guarantee of salvation to all who belong to Jesus. He helps believers in prayer.</p>
+      <blockquote class="verse">
+        <p>In him you also, when you heard the word of truth, the gospel of your salvation, and believed in him, were sealed with the promised Holy Spirit, who is the guarantee of our inheritance until we acquire possession of it, to the praise of his glory.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Ephesians+1%3A13-14&version=ESV" target="_blank" rel="noopener">Ephesians 1:13-14</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>For you did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons, by whom we cry, “Abba! Father!” The Spirit himself bears witness with our spirit that we are children of God.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+8%3A15-16&version=ESV" target="_blank" rel="noopener">Romans 8:15-16</a></cite>
+      </blockquote>
+      <blockquote class="verse">
+        <p>And I will put my Spirit within you, and cause you to walk in my statutes and be careful to obey my rules.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=Ezekiel+36%3A27&version=ESV" target="_blank" rel="noopener">Ezekiel 36:27</a></cite>
+      </blockquote>
+      <p>The Holy Spirit instructs all believers to see God’s wisdom and not human wisdom.</p>
+      <blockquote class="verse">
+        <p>Now we have received not the spirit of the world, but the Spirit who is from God, that we might understand the things freely given us by God. And we impart this in words not taught by human wisdom but taught by the Spirit, interpreting spiritual truths to those who are spiritual.</p>
+        <cite><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+2%3A12-13&version=ESV" target="_blank" rel="noopener">1 Corinthians 2:12-13</a></cite>
+      </blockquote>
+      <p>Without the work of the Holy Spirit, no person could come to Jesus, and no person could live the Christian life. God has given the Holy Spirit as a gift, as a helper in all of life.</p>
+            </div>
+          </details>
+        </div>
+      </details>
+      </div>
+
+    </div>
+  </article>
+
+</main>
+
+<footer class="on-ink">
+  <div class="max foot-top">
+    <svg viewBox="0 0 120 120" width="40" height="40" style="display:block;overflow:visible;flex:none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path fill="#E0655F" d="M30 102 C16 94 10 78 14 62 C16 70 20 74 24 75 C18 62 20 48 30 38 C30 46 33 51 37 53 C34 38 40 22 52 12 C50 24 53 32 58 36 C58 24 63 14 70 6 C70 18 74 26 80 32 C82 26 82 20 80 14 C90 24 94 38 90 50 C95 47 98 42 99 36 C106 48 108 62 104 74 C101 70 99 68 96 67 C98 80 94 94 88 102 Z"></path>
+      <path fill="#211F1D" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+      <path fill="#E0655F" fill-opacity="0.22" transform="translate(60 100) scale(0.82) translate(-60 -100)" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
+      <g fill="none" stroke="#FFFFFF">
+        <path stroke-width="6" d="M60 101 C58 93 61 87 60 80"></path>
+        <path stroke-width="3.4" d="M60 82 C54 76 46 72 37 66"></path>
+        <path stroke-width="3.4" d="M60 82 C66 76 74 72 83 66"></path>
+        <path stroke-width="3" d="M60 84 C58 72 61 60 60 46"></path>
+        <path stroke-width="2.6" d="M61 97 C68 95 72 90 71 83"></path>
+        <path stroke-width="2" d="M48 72 C46 64 42 58 38 54"></path>
+        <path stroke-width="2" d="M72 72 C74 64 78 58 82 54"></path>
+        <path stroke-width="1.8" d="M60 62 C54 58 50 52 48 46"></path>
+        <path stroke-width="1.8" d="M60 60 C66 56 70 50 72 44"></path>
+      </g>
+      <g fill="#FFFFFF" stroke="#211F1D" stroke-width="0.99" style="paint-order:stroke">
+        <path transform="translate(52.8 65.6) rotate(-32) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(53.3 61.1) rotate(-10) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(57.3 58.1) rotate(-5) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(62.7 58.1) rotate(2) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(66.7 61.1) rotate(7) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(44.5 64.8) rotate(-49) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(45.4 59.5) rotate(-25) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(48.7 55.1) rotate(-20) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(53.9 52.0) rotate(-15) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(60.0 51.0) rotate(-9) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(66.1 52.0) rotate(18) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(71.3 55.1) rotate(23) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(74.6 59.5) rotate(28) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(75.5 64.8) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(37.8 69.0) rotate(-66) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(37.0 63.6) rotate(-42) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(38.0 58.3) rotate(-39) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(40.8 53.3) rotate(-36) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(45.1 49.3) rotate(-32) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(50.6 46.4) rotate(-7) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(56.8 44.9) rotate(-3) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(63.2 44.9) rotate(2) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(69.4 46.4) rotate(6) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(74.9 49.3) rotate(31) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(79.2 53.3) rotate(35) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(82.0 58.3) rotate(38) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(83.0 63.6) rotate(41) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(35.8 58.8) rotate(-54) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(39.1 52.5) rotate(-28) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(44.7 47.4) rotate(-22) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(51.9 44.1) rotate(-15) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(60.0 43.0) rotate(-9) scale(0.98)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(68.1 44.1) rotate(18) scale(0.86)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(75.3 47.4) rotate(25) scale(1.04)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(80.9 52.5) rotate(31) scale(0.92)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+        <path transform="translate(84.2 58.8) rotate(36) scale(0.80)" d="M0 0 C3.2 -3 3.4 -8 0 -12 C-3.4 -8 -3.2 -3 0 0 Z"></path>
+      </g>
+      <path fill="#FFFFFF" stroke="#211F1D" stroke-width="1.2" d="M26 108 L40 99 L50 102 L58 97 L64 101 L72 98 L82 101 L94 108 Z"></path>
+      <path fill="none" stroke="#211F1D" stroke-width="1.2" d="M44 108 L56 102 L68 108"></path>
+    </svg>
+    <span class="wordmark-name">
+      <span class="n1">Grace Fellowship</span>
+      <span class="n2">Bible Presbyterian Church</span>
+    </span>
+  </div>
+  <div class="max">
+    <div>
+      <h4>Visit</h4>
+      <p>Meeting at &mdash; Windsor High School</p>
+      <p>1100 Main Street, Windsor, CO 80550</p>
+      <p style="margin-top:10px">Mailing Address &mdash; 1540 Main St, Suite 218 / 240<br>Windsor, CO 80550</p>
+    </div>
+    <div>
+      <h4>Service Times</h4>
+      <p>Sunday Worship Service: 9:30&nbsp;am</p>
+      <p>Sunday School: 11:15&nbsp;am</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p><a href="mailto:gracefellowshipbpc@gmail.com">gracefellowshipbpc@gmail.com</a></p>
+      <p style="margin-top:10px"><a href="https://www.gracefellowshipbpc.org/contact-us">Contact Us &rarr;</a></p>
+    </div>
+  </div>
+  <div class="copyright">
+    <span>&copy;2026 by Grace Fellowship Bible Presbyterian Church</span>
+    <span>Windsor, Colorado</span>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var acc = document.getElementById('wwb-accordion');
+    if (!acc) return;
+    var details = acc.querySelectorAll('details');
+    document.querySelectorAll('[data-accordion-action]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('data-accordion-action') === 'expand';
+        details.forEach(function (d) { d.open = open; });
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
