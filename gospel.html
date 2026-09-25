@@ -35,9 +35,29 @@
   article.prose{padding:32px 0 72px}
   article.prose .max{max-width:720px}
   article.prose p{font-size:1.05rem;line-height:1.75;text-align:justify;hyphens:auto;margin:0 0 22px}
-  article.prose h2{font-size:1.6rem;border-top:1px solid var(--color-divider);padding-top:36px;margin:52px 0 20px}
-  article.prose h2:first-of-type{margin-top:28px}
   article.prose a{text-decoration:underline}
+
+  /* ---------- accordion ---------- */
+  .accordion-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:36px 0 4px;padding-top:28px;border-top:1px solid var(--color-divider)}
+  .read-time{font-size:0.85rem;color:var(--color-neutral-700)}
+  .toolbar-btns{display:flex;gap:10px}
+  .btn-sm{font-size:12px;padding:6px 14px}
+  .accordion{margin-top:8px}
+  details.section{border-bottom:1px solid var(--color-divider)}
+  details.section summary{
+    display:flex;align-items:baseline;gap:12px;cursor:pointer;list-style:none;
+    padding:22px 0;font-family:var(--font-heading);font-weight:600;font-size:1.25rem;
+  }
+  details.section summary::-webkit-details-marker{display:none}
+  details.section summary::marker{content:""}
+  details.section .chevron{
+    flex:none;color:var(--color-accent);font-size:0.8em;display:inline-block;
+    transition:transform .15s ease;transform:rotate(0deg);
+  }
+  details.section[open] .chevron{transform:rotate(90deg)}
+  details.section summary:hover .section-title{color:var(--color-accent)}
+  details.section .section-body{padding:0 0 28px}
+  details.section .section-body p:last-child{margin-bottom:0}
 
   blockquote.verse{margin:32px 0;padding:20px 0 20px 24px;border-left:2px solid var(--color-accent)}
   blockquote.verse p{font-family:var(--font-heading);font-style:italic;font-size:1.15rem;line-height:1.55;text-align:left;hyphens:none;margin:0 0 8px;color:var(--color-text)}
@@ -189,7 +209,18 @@
       <p>If God is real, and He is, and if it is possible to be in either a right, or a wrong, relationship with Him, and it is, then the most important question in life is, &ldquo;Can I be right with God?&rdquo; Notice the question is not just, &ldquo;Can I know about God?&rdquo; but, &ldquo;Can I be right with God in my own life?&rdquo;</p>
       <p>Let&rsquo;s consider this question.</p>
 
-      <h2>God Must Come to Us, And He Does</h2>
+      <div class="accordion-toolbar">
+        <span class="read-time">16 sections &middot; about 25 minutes, all together</span>
+        <div class="toolbar-btns">
+          <button type="button" class="btn btn-secondary btn-sm" data-accordion-action="expand">Expand All</button>
+          <button type="button" class="btn btn-secondary btn-sm" data-accordion-action="collapse">Collapse All</button>
+        </div>
+      </div>
+
+      <div class="accordion" id="gospel-accordion">
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God Must Come to Us, And He Does</span></summary>
+        <div class="section-body">
       <p>To begin, we need to know something about God. You and I live in the created universe. It means we live in three dimensions constrained by time. But God created the three dimensions and time. He is outside and above the universe. In other words, we can&rsquo;t get out, but God can get in. This means that if we are to know about God and actually know God, He must come to us. If we are to love God, and experience His love in our life, He must come to us. And if we are ever to be right with our God, He must come to us.</p>
       <p>Thus, the gospel begins with this, God has come to us.</p>
       <blockquote class="verse">
@@ -198,7 +229,11 @@
       </blockquote>
       <p>This Bible verse tells us that God has come to us. He has revealed Himself to human beings by speaking the words written in the Bible and by sending His Son, Jesus, to us as a man. The very God who created all things has spoken to people on this earth. In fact, God has not only spoken to us, but He came to live among us for a time.</p>
 
-      <h2>God is Relational in His Very Nature</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God is Relational in His Very Nature</span></summary>
+        <div class="section-body">
       <p>Because God has spoken to us in the Bible, when we want to know God and be right with Him, we turn to the Bible.</p>
       <p>The first thing we need to know about God is that He is a &ldquo;Trinity.&rdquo; This is just a word to tell us that, in one sense, God is very different from human beings for God is three persons in one God. There is one and only one God, but He is complex beyond our simple understanding. In human terms, He is three persons in one God and each person is fully God, yet they are, together, one God. God Himself tells us that the three persons are the Father, the Son, and the Holy Spirit.</p>
       <p>Let me tell you why I start with the difficult idea of the Trinity &mdash; because it is fundamental to our ability to actually know God.</p>
@@ -210,14 +245,22 @@
       </blockquote>
       <p>You see, when God created all things, He created out of who He is. The Bible tells us that He is the living God (<a href="https://www.biblegateway.com/passage/?search=Jeremiah+10%3A10&amp;version=ESV" target="_blank" rel="noopener">Jeremiah 10:10</a>). It says, &ldquo;In Him was life, and the life was the light of men&rdquo; (<a href="https://www.biblegateway.com/passage/?search=John+1%3A4&amp;version=ESV" target="_blank" rel="noopener">John 1:4</a>). Thus, God imparted life to living creatures because He is the very source of all life. We live only because He lives.</p>
 
-      <h2>God Created all Human Beings in His Image</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God Created all Human Beings in His Image</span></summary>
+        <div class="section-body">
       <p>Therefore, if God is relational in His very nature, then when He created human beings in His image, He made them relational. The point is that we, as humans, are created in God&rsquo;s image precisely so we can know and love Him and so He can know and love us.</p>
       <p>Every human being is created with intrinsic value simply because every human being is created in God&rsquo;s image. This value can never be taken away, even though, as we will see, our hearts are now marred by sin.</p>
       <p>When God created Adam and Eve, God was with them, He talked with them and He walked in the garden with them. In this state, God, the Creator, said that all things were very good.</p>
       <p>God gave Adam and Eve a command. He said of the tree of the knowledge of good and evil, you shall not eat, for in the day you eat of it, you shall surely die.</p>
       <p>This command would test whether or not Adam and Eve would live under God&rsquo;s rule, trusting Him for all things. You see, God gave human beings dominion over all things in this universe except for the human heart. Only God rules the human heart.</p>
 
-      <h2>Adam and Eve Sinned Against God</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Adam and Eve Sinned Against God</span></summary>
+        <div class="section-body">
       <p>Shortly after creation, tragedy struck the human race. Adam and Eve sinned against God by eating of the forbidden tree. They fell to the temptation to seek to be as God themselves. They decided that they would rule their own life rather than live in a right relationship with God, under His rule. They turned their trust and focus inward. This was willful rebellion against God and every sin since that time has the same nature of willful rebellion.</p>
       <p>You may ask, how did this happen when all things were very good? Why did God allow this? God made a choice. He created human beings with free will with the ability to choose good or evil in the garden. They chose the evil of lawlessness. The Bible tells us that &ldquo;sin is lawlessness&rdquo; (<a href="https://www.biblegateway.com/passage/?search=1+John+3%3A4&amp;version=ESV" target="_blank" rel="noopener">1 John 3:4</a>).</p>
       <p>This sin brought separation from fellowship with God. For the first time, Adam and Eve tried to hide from their Creator. It is hard for us to imagine just how devastating this was. Immediately after this sin, Adam and Eve were banished from the Garden of Eden. In the first generation, murder, envy, vengeance, and death spread throughout all people. The Bible tells us that even creation itself, &ldquo;was subjected to futility&rdquo; by human sin (<a href="https://www.biblegateway.com/passage/?search=Romans+8%3A20&amp;version=ESV" target="_blank" rel="noopener">Romans 8:20</a>).</p>
@@ -225,18 +268,30 @@
       <p>When the Bible lists the effects of sin, it lists things like, &ldquo;idolatry, sorcery, enmity, strife, jealousy, fits of anger, rivalries, dissensions, divisions, envy, drunkenness, sexual immorality, evil desires, covetousness, idolatry&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Galatians+5%3A19-21&amp;version=ESV" target="_blank" rel="noopener">Galatians 5:19&ndash;21</a>, <a href="https://www.biblegateway.com/passage/?search=Colossians+3%3A5&amp;version=ESV" target="_blank" rel="noopener">Colossians 3:5</a>). It is easy to see that these are the things that separate and hurt people. Thus, it is easy to see that these are the things that separate us from a holy, just, and loving God.</p>
       <p>Think about how tragic this was when Adam and Eve hid from God. They were created to flourish in the very presence of their loving Creator and yet, here they were hiding in shame from that very Creator. Now think about how tragic it is in your life that you know the shame of sin and that you, even you who are reading this, feel the need to hide your guilt from your Creator.</p>
 
-      <h2>God Judges Sin</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God Judges Sin</span></summary>
+        <div class="section-body">
       <p>Is it right for God to judge and punish sin? Judge for yourself the evil we inflict on one another by sin. It is immense. Then, think of the evil of sinning against our good God. It is more immense. As God is an infinitely good God, so sin against Him is an infinite evil.</p>
       <p>Notice that sin is always &ldquo;against&rdquo; someone. Sin is against a personal and loving God, and it is against people whom He created in His image and whom He loves.</p>
       <p>The Bible tells us, &ldquo;He who justifies the wicked and he who condemns the righteous are both alike an abomination to the LORD&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Proverbs+17%3A15&amp;version=ESV" target="_blank" rel="noopener">Proverbs 17:15</a>). We instinctively know this is true. We would not even tolerate a human judge who set the guilty free and condemned the innocent, much less could God be good and perfect in His justice and do such wrong. No, the wicked, which, unfortunately is every one of us, must face the just penalty due to our sin. And that just punishment is death and eternal separation from the love of God.</p>
       <p>Furthermore, the Bible tells us that sin evokes God&rsquo;s wrath. That is, God hates everything about sin. He is angry with sin. Actually, this is not too hard for us to understand. If a person really hurts someone we love by malicious intent, then we would be angry with everything about that hurt, the person that could devise such malicious intent in their heart, the act itself, and the long-term effects of that malicious act. How much more must a loving, perfectly just God be angry with everything about sin, the person who could devise such evil intent in their heart, the words and actions produced by such intent, and the hurt and destruction that results. God&rsquo;s anger at everything about sin is so strong it is called His wrath.</p>
       <p>This is the bad news; this is the universal problem. We must be careful not to take the willful sin and corruption in our own hearts too lightly or we will fail to understand the greatness of God&rsquo;s love shown in the gospel of Jesus.</p>
 
-      <h2>We Cannot Climb Out On Our Own</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">We Cannot Climb Out On Our Own</span></summary>
+        <div class="section-body">
       <p>All human invented religions are attempts to overcome this problem by reaching up to God, by trying to make ourselves good enough to get God to accept and love us. If only we can do enough good to cancel our bad, perhaps our conscience will be clear enough so that we can come to God with confidence. But reality always stands in the way. Something is wrong in the human heart that must be fixed from the outside. Since the first sin, no human being has a core of righteousness from which to live life as God designed and commands.</p>
       <p>We can&rsquo;t get out, but God can get in. If we are to know real goodness and fellowship with our Creator, He must come to us and solve the problem of sin.</p>
 
-      <h2>The Good News</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Good News</span></summary>
+        <div class="section-body">
       <p>Jesus said this:</p>
       <blockquote class="verse">
         <p>&ldquo;For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life. For God did not send his Son into the world to condemn the world, but in order that the world might be saved through him.&rdquo;</p>
@@ -255,7 +310,11 @@
         <cite>Romans 4:7&ndash;8</cite>
       </blockquote>
 
-      <h2>God&rsquo;s Forgiveness is Real</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God’s Forgiveness is Real</span></summary>
+        <div class="section-body">
       <p>This passage tells us that God forgives sin and, therefore, does not count our forgiven sin against us. The word, &ldquo;forgiveness&rdquo; here is a translation of the original Greek word (&#7936;&#966;&#943;&#951;&#956;&#953;). This word means to separate and banish away. It is the same word used when Jesus heals a young woman&rsquo;s fever &mdash; the fever (&#7936;&#966;&#943;&#951;&#956;&#953;) her. That is, the fever was separated and banished away, and she was restored to health. The point is that God&rsquo;s forgiveness is real. God makes an actual separation of the sin from the person and, thereby, restores the person&rsquo;s soul.</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Psalm+103&amp;version=ESV" target="_blank" rel="noopener">Psalm 103</a> tells us:</p>
       <blockquote class="verse">
@@ -270,7 +329,11 @@
       <p>We can picture a white cloth, stained red. No matter how dark the stain, God can separate it and banish it away. There is no sin in your life so dark that God cannot remove it. There is no sin so intertwined in your life that God can not separate it and banish it away. No matter how deeply the stain of sin is embedded in the fibers of your life, God can separate it and banish it away.</p>
       <p class="callout">God&rsquo;s forgiveness is real!</p>
 
-      <h2>Jesus is Our Substitute</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Jesus is Our Substitute</span></summary>
+        <div class="section-body">
       <p>Now you may ask, if God separates my sins from me, where do they go? They go to Jesus. And if God cleans me white as snow, where does the righteousness come from to count me as righteous? It comes from Jesus.</p>
       <p>God is fully just; He does not just sweep evil, wrong, and hurt under the rug. He actually executes the full punishment for our sin on Jesus. Jesus is our substitute. He died in our place so that all who call upon Him might have eternal life.</p>
       <p><a href="https://www.biblegateway.com/passage/?search=Romans+8%3A3&amp;version=ESV" target="_blank" rel="noopener">Romans 8:3</a> tells us that Jesus came, &ldquo;in the likeness of sinful flesh and for sin,&rdquo; thus, by His death, he &ldquo;condemned sin in the flesh.&rdquo; In other words, forgiveness means your sins are gone and that means the corruption of sin, the guilt of sin, the shame of sin are gone. As far as the east is from the west, so far does God remove our sin from us in Jesus. This is how God can forgive sins but not clear the guilty.</p>
@@ -281,7 +344,11 @@
       <p>You see, Jesus came to earth as a human precisely so that by His death on a Roman cross, He could take human sin to himself and pay the just punishment for those sins. In doing this, Jesus sets us free from the fear of death because He has conquered the only power of death, which is sin. Without sin, death is but a passage into God&rsquo;s very presence for all eternity.</p>
       <p>Now, I have a question. If God executed all His just punishment and wrath on Jesus, how much punishment and wrath are left for us who are forgiven? The answer is <em>none</em>. Jesus sets the prisoner free.</p>
 
-      <h2>Salvation by Grace</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Salvation by Grace</span></summary>
+        <div class="section-body">
       <p>In the Book of Romans, there is a short summary of how God can rescue sinners from the judgment of death and yet still remain perfectly just in Himself.</p>
       <blockquote class="verse">
         <p>&ldquo;For all have sinned and fall short of the glory of God, and are justified by his grace as a gift, through the redemption that is in Christ Jesus, whom God put forward as a propitiation by his blood, to be received by faith. This was to show God&rsquo;s righteousness, because in his divine forbearance he had passed over former sins. It was to show his righteousness at the present time, so that he might be just and the justifier of the one who has faith in Jesus.&rdquo;</p>
@@ -292,7 +359,11 @@
       <p>Thus, this verse says directly that God is both, &ldquo;just and the justifier of the one who has faith in Jesus.&rdquo; Think about how amazing this is. If God were not perfectly just, all would be lost, for heaven itself is guaranteed only by God&rsquo;s justice. Because of His justice, we know that God does only right, and He does not change. He won&rsquo;t forgive today and change His mind tomorrow.</p>
       <p>Now this passage says something else important. It says that God justifies guilty sinners by grace, as a gift. To be justified means to be declared righteous in God&rsquo;s sight. This is entirely by grace, which means it comes entirely from within God because of His great love. In other words, salvation is not a process of us making ourselves good enough for God to love us. Salvation comes entirely from God as a gift. This is the goodness of God.</p>
 
-      <h2>Salvation Through Faith</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Salvation Through Faith</span></summary>
+        <div class="section-body">
       <p>This passage says one more vital thing. It says that God&rsquo;s forgiveness is, &ldquo;received by faith.&rdquo; Faith receives grace. If we think about this, it could be no other way. If we cannot make ourselves good enough, salvation must be a gift and a gift is always received, not earned.</p>
       <blockquote class="verse">
         <p>&ldquo;That is why it depends on faith, in order that the promise may rest on grace and be guaranteed to all his offspring.&rdquo;</p>
@@ -324,7 +395,11 @@
       <p>These disciples, who watched Jesus die, had so much certainty in the resurrection that they devoted the rest of their lives to proclaiming salvation in the name of Jesus. Every one of them was put to death for their proclamation of salvation in Jesus, yet they did not waver.</p>
       <p>Today, we can have certainty in our faith because these things were not myths and fables, but actual historical fact.</p>
 
-      <h2>Faith Means Trust</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Faith Means Trust</span></summary>
+        <div class="section-body">
       <p>Now true saving faith involves not just knowledge.</p>
       <blockquote class="verse">
         <p>&ldquo;Truly, truly, I say to you, unless one is born again he cannot see the kingdom of God.&rdquo;</p>
@@ -357,7 +432,11 @@
         <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+11%3A28-29&amp;version=ESV" target="_blank" rel="noopener">Matthew 11:28&ndash;29</a></cite>
       </blockquote>
 
-      <h2>Faith Means Repentance</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Faith Means Repentance</span></summary>
+        <div class="section-body">
       <p>If you were to place your full trust in Jesus for salvation, what would it mean for your life right now? Clearly, it would mean a different kind of life. Salvation is salvation from sin and lawlessness and their consequent judgement and to a life of knowing God. The point is that the Christian life is a life of loving God and, therefore, a life of forsaking the sin and lawlessness that is against Him. This forsaking sin and embracing goodness and righteousness is called, &ldquo;repentance.&rdquo; Repentance is a vital part of faith, and it is God&rsquo;s command:</p>
       <blockquote class="verse">
         <p>&ldquo;Now [God] commands all people everywhere to repent.&rdquo;</p>
@@ -365,7 +444,11 @@
       </blockquote>
       <p>Jesus Himself said, &ldquo;The time is fulfilled, and the kingdom of God is at hand; repent and believe in the gospel.&rdquo; (<a href="https://www.biblegateway.com/passage/?search=Mark+1%3A15&amp;version=ESV" target="_blank" rel="noopener">Mark 1:15</a>)</p>
 
-      <h2>Jesus Sets the Prisoner Free</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Jesus Sets the Prisoner Free</span></summary>
+        <div class="section-body">
       <p>My favorite picture of faith, repentance, and a new life is found in <a href="https://www.biblegateway.com/passage/?search=Psalm+40&amp;version=ESV" target="_blank" rel="noopener">Psalm 40</a>.</p>
       <blockquote class="verse">
         <p>He drew me up from the pit of destruction, out of the miry bog, and set my feet upon a rock, making my steps secure.</p>
@@ -373,7 +456,11 @@
       </blockquote>
       <p>If you have ever been stuck in a miry bog, you know that the more you struggle to escape, the deeper you end up pushing your feet into the mud. The only way out is help. You need someone to pull you out and set you on solid ground. This is what Jesus does. He pulls us up from the miry pit of sin and lawlessness. I have worked with men snared by addiction. These men were truly caught in a miry bog. Of course, all people caught by sin of one kind or another are captured by it. People caught in a life of adultery, or ensnared by a lie, dig themselves deeper and deeper. Even the sin of bitterness and anger ensnare a person in the miry bog. Whatever it is that has captured your heart in what your conscience tells you is wrong, Jesus can set you free.</p>
 
-      <h2>The Gospel Ends with God</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Gospel Ends with God</span></summary>
+        <div class="section-body">
       <p>I said the gospel begins and ends with God. It begins with God creating you to know Him and know His love for you. It ends with eternity in His presence. What does eternity in God&rsquo;s presence look like? Listen to how God describes it:</p>
       <blockquote class="verse">
         <p>&ldquo;Behold, the dwelling place of God is with man. He will dwell with them, and they will be his people, and God himself will be with them as their God. He will wipe away every tear from their eyes, and death shall be no more, neither shall there be mourning, nor crying, nor pain anymore, for the former things have passed away.&rdquo; And he who was seated on the throne said, &ldquo;Behold, I am making all things new.&rdquo;</p>
@@ -385,7 +472,11 @@
       </blockquote>
       <p>In other words, the gospel is not just about escaping judgment, the gospel is about restoring a lost relationship with your loving Creator.</p>
 
-      <h2>God is Calling on You to Repent and Believe the Gospel</h2>
+        </div>
+      </details>
+      <details class="section">
+        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God is Calling on You to Repent and Believe the Gospel</span></summary>
+        <div class="section-body">
       <p>God is calling on you who are reading this to believe the gospel, repent, and trust in the Lord Jesus Christ for all of life and eternity.</p>
       <p>The book of John says that it was written precisely so that you might believe and have eternal life in His name.</p>
       <blockquote class="verse">
@@ -404,6 +495,9 @@
         <p>&ldquo;And I am sure of this, that he who began a good work in you will bring it to completion at the day of Jesus Christ.&rdquo;</p>
         <cite><a href="https://www.biblegateway.com/passage/?search=Philippians+1%3A6&amp;version=ESV" target="_blank" rel="noopener">Philippians 1:6</a></cite>
       </blockquote>
+        </div>
+      </details>
+      </div>
 
     </div>
   </article>
@@ -533,6 +627,20 @@
     <span>Windsor, Colorado</span>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var acc = document.getElementById('gospel-accordion');
+    if (!acc) return;
+    var details = acc.querySelectorAll('details.section');
+    document.querySelectorAll('[data-accordion-action]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var open = btn.getAttribute('data-accordion-action') === 'expand';
+        details.forEach(function (d) { d.open = open; });
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
