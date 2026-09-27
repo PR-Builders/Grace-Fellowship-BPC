@@ -12,15 +12,27 @@
   .max{max-width:1120px;margin:0 auto;padding:0 32px}
   .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 
-  /* ---------- brand intro (scrolls away, leaving the sticky header) ---------- */
-  .brand-intro{padding:52px 0 36px;text-align:center;border-bottom:1px solid var(--color-divider)}
-  .brand-intro .mark{margin:0 auto 18px;display:block}
-  .brand-intro-name{font-family:var(--font-heading);font-weight:600;font-size:2.1rem;line-height:1.1}
-  .brand-intro-sub{font-size:0.78rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-neutral-700);margin-top:6px}
-  .brand-intro-motto{font-family:var(--font-heading);font-style:italic;color:var(--color-accent);font-size:1.05rem;margin-top:12px}
+    /* ---------- header: big splash morphs into the compact nav on scroll ---------- */
+  *{overflow-anchor:none}
+  header.site{position:sticky;top:0;z-index:40;background:var(--color-bg);border-bottom:1px solid var(--color-divider)}
+  .header-expanded{
+    text-align:center;padding:44px 0 30px;
+    max-height:340px;opacity:1;overflow:hidden;
+    transition:max-height .32s ease, opacity .22s ease, padding .32s ease;
+  }
+  .header-expanded .mark{margin:0 auto 16px;display:block}
+  .header-expanded .brand-intro-name{font-family:var(--font-heading);font-weight:600;font-size:2rem;line-height:1.1}
+  .header-expanded .brand-intro-sub{font-size:0.78rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--color-neutral-700);margin-top:6px}
+  .header-expanded .brand-intro-motto{font-family:var(--font-heading);font-style:italic;color:var(--color-accent);font-size:1.05rem;margin-top:12px}
+  header.site.is-compact .header-expanded{max-height:0;opacity:0;padding:0}
+  /* the compact nav row itself always stays visible/usable (nav links, burger, Visit
+     button) — only its logo+wordmark crossfades in, so the brand isn't shown twice
+     at once while the splash above is still expanded, but navigation never disappears */
+  .header-compact .wordmark{opacity:0;transition:opacity .22s ease}
+  header.site.is-compact .header-compact .wordmark{opacity:1}
   @media (max-width:640px){
-    .brand-intro{padding:36px 0 26px}
-    .brand-intro-name{font-size:1.7rem}
+    .header-expanded{padding:32px 0 22px}
+    .header-expanded .brand-intro-name{font-size:1.6rem}
   }
 
   /* ---------- header ---------- */
@@ -135,8 +147,9 @@
 </head>
 <body>
 
-<div class="brand-intro">
-  <div class="max">
+<header class="site">
+  <div class="header-expanded">
+    <div class="max">
     <svg viewBox="0 0 120 120" width="88" height="88" class="mark" style="display:block;overflow:visible" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
         <path fill="#9E1B22" d="M30 102 C16 94 10 78 14 62 C16 70 20 74 24 75 C18 62 20 48 30 38 C30 46 33 51 37 53 C34 38 40 22 52 12 C50 24 53 32 58 36 C58 24 63 14 70 6 C70 18 74 26 80 32 C82 26 82 20 80 14 C90 24 94 38 90 50 C95 47 98 42 99 36 C106 48 108 62 104 74 C101 70 99 68 96 67 C98 80 94 94 88 102 Z"></path>
         <path fill="#FFFFFF" d="M38 100 C28 92 26 80 30 70 C33 75 36 77 39 77 C36 66 40 54 48 46 C48 52 50 56 54 58 C54 46 58 36 64 28 C66 38 70 44 76 48 C78 44 78 40 77 36 C84 44 88 56 86 66 C89 64 91 60 92 57 C96 68 94 84 84 100 Z"></path>
@@ -196,10 +209,9 @@
     <div class="brand-intro-name">Grace Fellowship</div>
     <div class="brand-intro-sub">Bible Presbyterian Church</div>
     <div class="brand-intro-motto">Nec tamen consumebatur</div>
+    </div>
   </div>
-</div>
-
-<header class="site">
+  <div class="header-compact">
   <div class="nav-row">
     <a class="wordmark" href="index.html">
       <svg viewBox="0 0 120 120" width="34" height="34" style="display:block;overflow:visible;flex:none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -280,7 +292,26 @@
       <a class="btn btn-primary header-visit" href="index.html#visit">Visit Us</a>
     </nav>
   </div>
+  </div>
 </header>
+
+<script>
+  (function () {
+    var header = document.querySelector('header.site');
+    if (!header) return;
+    var threshold = 40;
+    function onScroll() {
+      if (window.scrollY > threshold) {
+        header.classList.add('is-compact');
+      } else {
+        header.classList.remove('is-compact');
+      }
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+
 
 <main id="top">
 
