@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Theology of Church | Grace Fellowship Bible Presbyterian Church</title>
-<meta name="description" content="Grace Fellowship’s theology of the church: adoption into God’s family, Christ as head, gathered worship, the regulative principle, the body of Christ, and servant leadership.">
+<title>Contact Us | Grace Fellowship Bible Presbyterian Church</title>
+<meta name="description" content="Get in touch with Grace Fellowship Bible Presbyterian Church, Windsor, Colorado, and find where we meet on Sunday mornings.">
 <link rel="stylesheet" href="styles.css">
 <style>
 
@@ -38,17 +38,21 @@
   article.prose p{font-size:1.05rem;line-height:1.75;text-align:justify;hyphens:auto;margin:0 0 22px}
   article.prose a{text-decoration:underline}
 
-  /* ---------- order of worship ---------- */
-  .order-of-worship{list-style:none;margin:20px 0 24px;padding:0;counter-reset:ow}
-  .order-of-worship li{
-    counter-increment:ow;position:relative;padding:12px 0 12px 40px;
-    border-top:1px solid var(--color-divider);font-size:1.02rem;line-height:1.5;
-  }
-  .order-of-worship li:first-child{border-top:none}
-  .order-of-worship li::before{
-    content:counter(ow);position:absolute;left:0;top:12px;
-    font-family:var(--font-heading);font-style:italic;font-weight:600;
-    color:var(--color-accent);font-size:1.15rem;width:28px;
+  /* ---------- contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px}
+  .contact-info{margin-top:20px}
+  .contact-info dt{font-size:0.78rem;color:var(--color-neutral-700);margin-top:18px}
+  .contact-info dt:first-child{margin-top:0}
+  .contact-info dd{margin:2px 0 0;font-family:var(--font-heading);font-weight:600;font-size:1.05rem}
+  .honeypot-field{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);pointer-events:none}
+  .form-note{font-size:0.82rem;color:var(--color-neutral-700);margin-top:10px}
+  .form-status{font-size:0.9rem;margin-top:14px;display:none}
+  .form-status.is-visible{display:block}
+  .map-section{padding:0 0 72px}
+  .embed-frame{border:1px solid var(--color-divider);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}
+  .embed-label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);margin-bottom:10px;display:block}
+  @media (max-width:920px){
+    .contact-grid{grid-template-columns:1fr;gap:36px}
   }
 
 
@@ -193,11 +197,11 @@
       <ul>
         <li><a href="gospel.html">The Gospel</a></li>
         <li><a href="what-we-believe.html">What We Believe</a></li>
-        <li><a href="theology-of-church.html" aria-current="page">Theology of Church</a></li>
+        <li><a href="theology-of-church.html">Theology of Church</a></li>
         <li><a href="sermons.html">Sermons</a></li>
         <li><a href="https://www.gracefellowshipbpc.org/blog">Blog</a></li>
         <li><a href="https://www.gracefellowshipbpc.org/shepherds">Shepherds</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
       </ul>
       <label class="burger" for="nav-toggle">
         <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 1h18M0 7h18M0 13h18"/></svg>
@@ -211,122 +215,60 @@
 
   <div class="article-hero">
     <div class="max">
-      <span class="kicker">Church</span>
-      <h1 class="display">Our Theology of Church</h1>
-      <blockquote class="verse" style="text-align:center;border-left:none;padding-left:0">
-        <p style="text-align:center">Therefore let us be grateful for receiving a kingdom that cannot be shaken, and thus let us offer to God acceptable worship, with reverence and awe.</p>
-        <cite style="text-align:center">Hebrews 12:28</cite>
-      </blockquote>
+      <span class="kicker">Get in Touch</span>
+      <h1 class="display">Contact Us</h1>
+      <p class="lede">We’d love to hear from you &mdash; send a note, or find us this Sunday.</p>
     </div>
   </div>
 
   <article class="prose">
-    <div class="max">
-
-      <div class="accordion-toolbar">
-        <span class="read-time">6 sections &middot; a shorter read than our other doctrine pages</span>
-        <div class="toolbar-btns">
-          <button type="button" class="btn btn-secondary btn-sm" data-accordion-action="expand">Expand All</button>
-          <button type="button" class="btn btn-secondary btn-sm" data-accordion-action="collapse">Collapse All</button>
-        </div>
+    <div class="max contact-grid">
+      <div>
+        <h2 style="margin-bottom:6px">Send a Message</h2>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input class="input" type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input class="input" type="email" id="cf-email" name="email" autocomplete="email" required>
+          </div>
+          <!-- Honeypot: hidden from real visitors; a filled-in value means a bot filled the form. -->
+          <div class="field honeypot-field" aria-hidden="true">
+            <label for="cf-company">Company</label>
+            <input class="input" type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          <p class="form-note">This opens your email app with your message ready to send to <a href="mailto:gracefellowshipbpc@gmail.com">gracefellowshipbpc@gmail.com</a>.</p>
+          <p class="form-status" id="cf-status"></p>
+        </form>
       </div>
 
-      <div class="accordion" id="toc-accordion">
-      <details class="section">
-        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Our Theology of Church</span></summary>
-        <div class="section-body">
-      <p>A beautiful aspect of belonging to God through Jesus is “adoption.” God says that everyone whom He justifies, He adopts to be His own. This, of course, means that God takes on the task of securing every one of His children for eternity. It also means that Christians on this earth are all in the same family, God’s family. It means that God has given us the duty to care for one another as brothers and sisters. It means that, not only do we have God’s promise to never leave or forsake us, but that we have a family by our side every step of the way.</p>
-      <blockquote class="verse">
-        <p>“See what kind of love the Father has given to us, that we should be called children of God; and so we are.”</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=1+John+3%3A1&version=ESV" target="_blank" rel="noopener">1 John 3:1</a></cite>
-      </blockquote>
-      <blockquote class="verse">
-        <p>“For you did not receive the spirit of slavery to fall back into fear, but you have received the Spirit of adoption as sons, by whom we cry, ‘Abba! Father!’”</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+8%3A15&version=ESV" target="_blank" rel="noopener">Romans 8:15</a></cite>
-      </blockquote>
-        </div>
-      </details>
-      <details class="section">
-        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Jesus is the Head of the Church</span></summary>
-        <div class="section-body">
-      <p>The image of the church as the Body of Christ brings out the reality that Jesus is the head of every church. The people assembled are His people for whom He died to redeem them to God. This means that every church must operate as Jesus directs and for His praise. It also means that all people in the church must be treated with the honor due to children of God, both by each other and by the leaders.</p>
-      <blockquote class="verse">
-        <p>[God has placed Jesus] “far above all rule and authority and power and dominion, and above every name that is named, not only in this age but also in the one to come. And he put all things under his feet and gave him as head over all things to the church, which is his body, the fullness of him who fills all in all.</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Ephesians+1%3A21-23&version=ESV" target="_blank" rel="noopener">Ephesians 1:21-23</a></cite>
-      </blockquote>
-        </div>
-      </details>
-      <details class="section">
-        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">God Himself Calls His People to Meet Together</span></summary>
-        <div class="section-body">
-      <p>The foundation of church fellowship is a heart washed clean from an evil conscience. This is a beautiful picture of salvation. It is out of this clean heart that God enables us to stir one another up love and good works. This is the heart of community in God’s church.</p>
-      <p>“Let us draw near with a true heart in full assurance of faith, with our hearts sprinkled clean from an evil conscience and our bodies washed with pure water. Let us hold fast the confession of our hope without wavering, for he who promised is faithful. And let us consider how to stir up one another to love and good works, not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.” (<a href="https://www.biblegateway.com/passage/?search=Hebrews+10%3A22-25&version=ESV" target="_blank" rel="noopener">Hebrews 10:22-25</a>)</p>
-        </div>
-      </details>
-      <details class="section">
-        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Regulative Principle of Worship</span></summary>
-        <div class="section-body">
-      <p>Because we believe that God gave us everything we need for life and godliness in the Bible, we believe that God sufficiently instructed us in how He would have us worship Him. Of course this would be so. God is the Creator, He know best how worship will glorify Him and edify us. God "regulates" our worship through His Word.</p>
-      <p>Thus, every worship service at Grace Fellowship Bible Presbyterian Church has the elements of:</p>
-      <ol class="order-of-worship">
-        <li>God’s call to worship. We trust that God takes the initiative to call us into His presence.</li>
-        <li>Prayer</li>
-        <li>Psalms, hymns, and spiritual songs</li>
-        <li>Confession of sin with an assurance of God’s great forgiveness</li>
-        <li>Confession of our faith before God</li>
-        <li>Preaching and reading God’s Word</li>
-        <li>God’s blessings for His people. We trust that God takes the initiative to bless His people through worship.</li>
-      </ol>
-        </div>
-      </details>
-      <details class="section">
-        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">The Church is the Body of Christ</span></summary>
-        <div class="section-body">
-      <p>Another picture the Bible gives of God’s people is “The Body of Christ.”</p>
-      <blockquote class="verse">
-        <p>For as in one body we have many members, and the members do not all have the same function, so we, though many, are one body in Christ, and individually members one of another.</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+12%3A4-5&version=ESV" target="_blank" rel="noopener">Romans 12:4-5</a></cite>
-      </blockquote>
-      <blockquote class="verse">
-        <p>For the body does not consist of one member but of many. If the foot should say, “Because I am not a hand, I do not belong to the body,” that would not make it any less a part of the body. And if the ear should say, “Because I am not an eye, I do not belong to the body,” that would not make it any less a part of the body. If the whole body were an eye, where would be the sense of hearing? If the whole body were an ear, where would be the sense of smell? But as it is, God arranged the members in the body, each one of them, as he chose. If all were a single member, where would the body be? As it is, there are many parts, yet one body.</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=1+Corinthians+12%3A14-20&version=ESV" target="_blank" rel="noopener">1 Corinthians 12:14-20</a></cite>
-      </blockquote>
-      <p>This picture is essential for life together as a church.</p>
-      <p>The word, “church” is simply the English translation of the original Greek word, (ἐκκλησία). This original word simply means an assembly of people called out for the purpose. That is, the church is an assembly of people whom God has called out of the world to belong to Him and to assemble together. Thus, the importance of assembling together is built into God’s very call of His people out of the world.</p>
-      <p>What these passages say is that we all have different abilities. We must not try to mold everyone into a hand, for God gave a whole body of believers to work together to bring Him glory, to proclaim the gospel and to serve one another. If God is the sovereign Lord of all things, and He is, then God gathers whom He will and we trust that He gathers the people He so desires.</p>
-      <p>Romans 12 goes on to say.</p>
-      <blockquote class="verse">
-        <p>Having gifts that differ according to the grace given to us, let us use them: if prophecy, in proportion to our faith; if service, in our serving; the one who teaches, in his teaching; the one who exhorts, in his exhortation; the one who contributes, in generosity; the one who leads, with zeal; the one who does acts of mercy, with cheerfulness.</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Romans+12%3A6-8&version=ESV" target="_blank" rel="noopener">Romans 12:6-8</a></cite>
-      </blockquote>
-      <p>Notice that every one of these gifts assumes a community. There is a server and a recipient, a teacher and a student. The point is that God gives gifts to be used in the community of His church to lift one another up. And taken together, these gifts are used to serve the larger community so that God is glorified in all that He does.</p>
-        </div>
-      </details>
-      <details class="section">
-        <summary><span class="chevron" aria-hidden="true">&#9656;</span><span class="section-title">Leaders of the Church Are Servants for the Sake of God’s People</span></summary>
-        <div class="section-body">
-      <p>God has directed that His church be led by elders who are responsible for teaching God’s Word, and only in line with God’s Word.</p>
-      <blockquote class="verse">
-        <p>Paul directed Timothy to, “appoint elders in every town as I directed you”</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Titus+1%3A5&version=ESV" target="_blank" rel="noopener">Titus 1:5b</a></cite>
-      </blockquote>
-      <p>However, leaders of the church must not “lord it over” God’s people. Church leaders are called to be servants first and foremost. Jesus said leaders must be a servant, for even Jesus came not to serve, but to be served. In other words, humility must rule in a leader's heart.</p>
-      <blockquote class="verse">
-        <p>Jesus said, “You know that the rulers of the Gentiles lord it over them, and their great ones exercise authority over them. It shall not be so among you. But whoever would be great among you must be your servant, and whoever would be first among you must be your slave, even as the Son of Man came not to be served but to serve, and to give his life as a ransom for many.”</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Matthew+20%3A25-28&version=ESV" target="_blank" rel="noopener">Matthew 20:25-28</a></cite>
-      </blockquote>
-      <p>The Apostle Paul, who planted many churches across Asia, had a deep love for God’s people. For this reason, he sought and prayed that they would be encouraged in their hearts and knit together in love. It is an environment of leaders loving God and His children, teaching God’s Word, and humbly encouraging the assembly of God’s people to reach a full assurance of the knowledge of God’s salvation in Christ. This is our vision for Grace Fellowship Bible Presbyterian Church.</p>
-      <blockquote class="verse">
-        <p>For I want you to know how great a struggle I have for you and for those at Laodicea and for all who have not seen me face to face, that their hearts may be encouraged, being knit together in love, to reach all the riches of full assurance of understanding and the knowledge of God’s mystery, which is Christ, in whom are hidden all the treasures of wisdom and knowledge.</p>
-        <cite><a href="https://www.biblegateway.com/passage/?search=Colossians+2%3A1-3&version=ESV" target="_blank" rel="noopener">Colossians 2:1-3</a></cite>
-      </blockquote>
-      <p>In reformed Presbyterian churches, this principle states that leaders (and fellow believers) must not "bind the conscience" of any believer. That is, we must preach and teach, to the best of our ability, only what God says. God can specify truth and require obedience from His children, but church leaders must not interject personal opinion as authoritative. Especially, church leaders (and fellow believers) must not put themselves in a position of requiring anything that God Himself does not require.</p>
-        </div>
-      </details>
+      <div>
+        <h2 style="margin-bottom:6px">Other Ways to Reach Us</h2>
+        <dl class="contact-info">
+          <dt>Meeting at</dt>
+          <dd>Windsor High School<br>1100 Main Street, Windsor, Colorado</dd>
+          <dt>Mailing Address</dt>
+          <dd>1540 Main St, Suite 218 / 240<br>Windsor, CO 80550</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:gracefellowshipbpc@gmail.com">gracefellowshipbpc@gmail.com</a></dd>
+          <dt>Sunday Schedule</dt>
+          <dd>Worship 9:30&nbsp;am &middot; Sunday School 11:15&nbsp;am</dd>
+        </dl>
       </div>
-
     </div>
   </article>
+
+  <section class="map-section">
+    <div class="max">
+      <span class="embed-label">Where We Meet</span>
+      <div class="embed-frame">
+        <iframe title="Map to Windsor High School, 1100 Main Street, Windsor, Colorado" width="100%" height="380" style="display:block;border:0" loading="lazy" src="https://maps.google.com/maps?q=Windsor+High+School,+1100+Main+St,+Windsor,+CO+80550&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
 
 </main>
 
@@ -419,14 +361,23 @@
 
 <script>
   (function () {
-    var acc = document.getElementById('toc-accordion');
-    if (!acc) return;
-    var details = acc.querySelectorAll('details');
-    document.querySelectorAll('[data-accordion-action]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var open = btn.getAttribute('data-accordion-action') === 'expand';
-        details.forEach(function (d) { d.open = open; });
-      });
+    var form = document.getElementById('contact-form');
+    var status = document.getElementById('cf-status');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var honeypot = form.elements['company'];
+      if (honeypot && honeypot.value.trim() !== '') {
+        return; // likely a bot; do nothing
+      }
+      var name = form.elements['name'].value.trim();
+      var email = form.elements['email'].value.trim();
+      if (!name || !email) return;
+      var subject = encodeURIComponent('Website Contact Form');
+      var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n');
+      window.location.href = 'mailto:gracefellowshipbpc@gmail.com?subject=' + subject + '&body=' + body;
+      status.textContent = 'Opening your email app… if nothing happens, email us directly at gracefellowshipbpc@gmail.com.';
+      status.className = 'form-status is-visible';
     });
   })();
 </script>
