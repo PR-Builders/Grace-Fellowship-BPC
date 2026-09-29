@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact Us | Grace Fellowship Bible Presbyterian Church</title>
-<meta name="description" content="Get in touch with Grace Fellowship Bible Presbyterian Church, Windsor, Colorado, and find where we meet on Sunday mornings.">
+<title>Our Leaders | Grace Fellowship Bible Presbyterian Church</title>
+<meta name="description" content="Meet the pastor and elders of Grace Fellowship Bible Presbyterian Church, Windsor, Colorado.">
 <link rel="stylesheet" href="styles.css">
 <style>
 
@@ -61,21 +61,23 @@
   article.prose p{font-size:1.05rem;line-height:1.75;text-align:justify;hyphens:auto;margin:0 0 22px}
   article.prose a{text-decoration:underline}
 
-  /* ---------- contact ---------- */
-  .contact-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px}
-  .contact-info{margin-top:20px}
-  .contact-info dt{font-size:0.78rem;color:var(--color-neutral-700);margin-top:18px}
-  .contact-info dt:first-child{margin-top:0}
-  .contact-info dd{margin:2px 0 0;font-family:var(--font-heading);font-weight:600;font-size:1.05rem}
-  .honeypot-field{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);pointer-events:none}
-  .form-note{font-size:0.82rem;color:var(--color-neutral-700);margin-top:10px}
-  .form-status{font-size:0.9rem;margin-top:14px;display:none}
-  .form-status.is-visible{display:block}
-  .map-section{padding:0 0 72px}
-  .embed-frame{border:1px solid var(--color-divider);border-radius:var(--radius-md);overflow:hidden;background:var(--color-surface)}
-  .embed-label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-neutral-700);margin-bottom:10px;display:block}
-  @media (max-width:920px){
-    .contact-grid{grid-template-columns:1fr;gap:36px}
+  /* ---------- leaders ---------- */
+  .leader-featured{display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;padding-bottom:44px;border-bottom:1px solid var(--color-divider);margin-bottom:44px}
+  .leader-photo{aspect-ratio:1;border:1px solid var(--color-divider);border-radius:var(--radius-md);background:var(--color-surface);display:flex;align-items:center;justify-content:center;position:relative}
+  .leader-photo svg{width:44%;height:44%;color:var(--color-neutral-500)}
+  .leader-photo-caption{font-size:11px;color:var(--color-neutral-600);text-align:center;margin-top:8px}
+  .leader-name{font-family:var(--font-heading);font-weight:600;font-size:1.5rem;margin-top:2px}
+  .leader-role{font-size:0.8rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-accent);margin-top:2px}
+  .leader-contact{margin-top:10px;font-size:0.92rem}
+  .leader-contact a{display:block}
+  .leader-bio{margin-top:14px;font-style:italic;color:var(--color-neutral-700)}
+  .leader-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+  .leader-card{display:flex;flex-direction:column}
+  .leader-card .leader-photo{margin-bottom:14px}
+  @media (max-width:760px){
+    .leader-featured{grid-template-columns:1fr;gap:20px}
+    .leader-featured .leader-photo{max-width:220px}
+    .leader-grid{grid-template-columns:1fr;gap:36px}
   }
 
 
@@ -287,8 +289,8 @@
         <li><a href="theology-of-church.html">Theology of Church</a></li>
         <li><a href="sermons.html">Sermons</a></li>
         <li><a href="https://www.gracefellowshipbpc.org/blog">Blog</a></li>
-        <li><a href="shepherds.html">Shepherds</a></li>
-        <li><a href="contact.html" aria-current="page">Contact Us</a></li>
+        <li><a href="shepherds.html" aria-current="page">Shepherds</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
       <label class="burger" for="nav-toggle">
         <svg width="18" height="14" viewBox="0 0 18 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 1h18M0 7h18M0 13h18"/></svg>
@@ -298,6 +300,7 @@
   </div>
   </div>
 </header>
+
 
 <script>
   (function () {
@@ -316,65 +319,69 @@
   })();
 </script>
 
-
 <main id="top">
 
   <div class="article-hero">
     <div class="max">
-      <span class="kicker">Get in Touch</span>
-      <h1 class="display">Contact Us</h1>
-      <p class="lede">We’d love to hear from you &mdash; send a note, or find us this Sunday.</p>
+      <span class="kicker">Leadership</span>
+      <h1 class="display">Our Leaders</h1>
+      <p class="lede">Grace Fellowship is shepherded by a pastor and elders who serve as servants of God&rsquo;s people.</p>
     </div>
   </div>
 
   <article class="prose">
-    <div class="max contact-grid">
-      <div>
-        <h2 style="margin-bottom:6px">Send a Message</h2>
-        <form id="contact-form" novalidate>
-          <div class="field">
-            <label for="cf-name">Name</label>
-            <input class="input" type="text" id="cf-name" name="name" autocomplete="name" required>
+    <div class="max">
+
+      <div class="leader-featured">
+        <div>
+          <div class="leader-photo">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="50" cy="36" r="18"></circle><path d="M14 88c0-22 16-34 36-34s36 12 36 34"></path></svg>
           </div>
-          <div class="field">
-            <label for="cf-email">Email</label>
-            <input class="input" type="email" id="cf-email" name="email" autocomplete="email" required>
+          <p class="leader-photo-caption">Photo coming soon</p>
+        </div>
+        <div>
+          <div class="leader-name">Bryan Prouty</div>
+          <div class="leader-role">Pastor</div>
+          <div class="leader-contact">
+            <a href="mailto:bryan.g.prouty@gmail.com">bryan.g.prouty@gmail.com</a>
+            <a href="tel:+19704206733">(970) 420-6733</a>
           </div>
-          <!-- Honeypot: hidden from real visitors; a filled-in value means a bot filled the form. -->
-          <div class="field honeypot-field" aria-hidden="true">
-            <label for="cf-company">Company</label>
-            <input class="input" type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off">
-          </div>
-          <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-          <p class="form-note">This opens your email app with your message ready to send to <a href="mailto:gracefellowshipbpc@gmail.com">gracefellowshipbpc@gmail.com</a>.</p>
-          <p class="form-status" id="cf-status"></p>
-        </form>
+          <p class="leader-bio">[Add a short bio for Pastor Bryan Prouty here &mdash; background, family, years in ministry, how he came to Grace Fellowship.]</p>
+        </div>
       </div>
 
-      <div>
-        <h2 style="margin-bottom:6px">Other Ways to Reach Us</h2>
-        <dl class="contact-info">
-          <dt>Meeting at</dt>
-          <dd>Windsor High School<br>1100 Main Street, Windsor, Colorado</dd>
-          <dt>Mailing Address</dt>
-          <dd>1540 Main St, Suite 218 / 240<br>Windsor, CO 80550</dd>
-          <dt>Email</dt>
-          <dd><a href="mailto:gracefellowshipbpc@gmail.com">gracefellowshipbpc@gmail.com</a></dd>
-          <dt>Sunday Schedule</dt>
-          <dd>Worship 9:30&nbsp;am &middot; Sunday School 11:15&nbsp;am</dd>
-        </dl>
+      <div class="leader-grid">
+        <div class="leader-card">
+          <div class="leader-photo">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="50" cy="36" r="18"></circle><path d="M14 88c0-22 16-34 36-34s36 12 36 34"></path></svg>
+          </div>
+          <p class="leader-photo-caption">Photo coming soon</p>
+          <div class="leader-name">Larry Kilpatrick</div>
+          <div class="leader-role">Assistant Pastor</div>
+          <p class="leader-bio">[Add a short bio for Larry here.]</p>
+        </div>
+        <div class="leader-card">
+          <div class="leader-photo">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="50" cy="36" r="18"></circle><path d="M14 88c0-22 16-34 36-34s36 12 36 34"></path></svg>
+          </div>
+          <p class="leader-photo-caption">Photo coming soon</p>
+          <div class="leader-name">Nels Nelson</div>
+          <div class="leader-role">Elder</div>
+          <p class="leader-bio">[Add a short bio for Nels here.]</p>
+        </div>
+        <div class="leader-card">
+          <div class="leader-photo">
+            <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="50" cy="36" r="18"></circle><path d="M14 88c0-22 16-34 36-34s36 12 36 34"></path></svg>
+          </div>
+          <p class="leader-photo-caption">Photo coming soon</p>
+          <div class="leader-name">Victor Solanyk</div>
+          <div class="leader-role">Elder</div>
+          <p class="leader-bio">[Add a short bio for Victor here.]</p>
+        </div>
       </div>
+
     </div>
   </article>
-
-  <section class="map-section">
-    <div class="max">
-      <span class="embed-label">Where We Meet</span>
-      <div class="embed-frame">
-        <iframe title="Map to Windsor High School, 1100 Main Street, Windsor, Colorado" width="100%" height="380" style="display:block;border:0" loading="lazy" src="https://maps.google.com/maps?q=Windsor+High+School,+1100+Main+St,+Windsor,+CO+80550&output=embed"></iframe>
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -464,29 +471,6 @@
     <span>Windsor, Colorado</span>
   </div>
 </footer>
-
-<script>
-  (function () {
-    var form = document.getElementById('contact-form');
-    var status = document.getElementById('cf-status');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var honeypot = form.elements['company'];
-      if (honeypot && honeypot.value.trim() !== '') {
-        return; // likely a bot; do nothing
-      }
-      var name = form.elements['name'].value.trim();
-      var email = form.elements['email'].value.trim();
-      if (!name || !email) return;
-      var subject = encodeURIComponent('Website Contact Form');
-      var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n');
-      window.location.href = 'mailto:gracefellowshipbpc@gmail.com?subject=' + subject + '&body=' + body;
-      status.textContent = 'Opening your email app… if nothing happens, email us directly at gracefellowshipbpc@gmail.com.';
-      status.className = 'form-status is-visible';
-    });
-  })();
-</script>
 
 </body>
 </html>
